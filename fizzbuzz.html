@@ -33,6 +33,9 @@
       text-align:center;
       background-color: lightgray;
     }
+    .nav {
+      /*for jQuery anim only*/
+    }
     #topNav {
       text-align: center;
       background-color: #81F7F3;
@@ -152,15 +155,13 @@
       function divisibleBy(n, divisor) {
         return (n % divisor === 0);
       };
-      $("#reset")
-        .mouseenter(
-          function() {
-            $(".instructions").show();
-          })
-        .mouseleave(
-          function() {
-            $(".instructions").hide();
-          });
+      $(".nav").hover(
+        function() {
+          $(".instructions").show();
+        },
+        function() {
+          $(".instructions").hide();
+        });
       $("#playGame").click(function() {
         var userFizzRepeat = $("#userFizzNum").val();
         var userBuzzRepeat = $("#userBuzzNum").val();

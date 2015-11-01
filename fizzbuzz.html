@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>FizzBuzz</title>
+  <title>Test</title>
   <link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,600italic,400italic' rel='stylesheet' type='text/css'>
   <style>
@@ -33,9 +33,6 @@
       text-align:center;
       background-color: lightgray;
     }
-    .nav {
-      /*for jQuery anim only*/
-    }
     #topNav {
       text-align: center;
       background-color: #81F7F3;
@@ -53,12 +50,10 @@
       text-align:center;
     }
     #instructionsHeader {
-      display:none;
       font-family: acme;
       font-size: 28px;
     }
     .instructions {
-      display:none;
       margin-left: 15px;
       font-size: 20px;
     }
@@ -67,11 +62,9 @@
       text-align: center;
     }
     #readyMessage {
-      display:none;
       margin-top: -20px;
     }
     #playGame {
-      display:none;
       font-family: acme;
       font-size: 30px;
       color: white;
@@ -100,7 +93,7 @@
     }
     #currentNumber {
       font-family: acme;
-      background-color:gray;
+      background-color:red;
       color:white;
       padding-bottom: -3px;
       margin-bottom:-35px;
@@ -121,16 +114,12 @@
       margin-top: -10px;
     }
     #nextNumberIcon {
-      background-color: red;
     }
     #fizzIcon {
-      background-color: yellow;
     }
     #buzzIcon {
-      background-color: green;
     }
     #fizzBuzzIcon {
-      background-color: blue;
     }
     .images {
     }
@@ -155,13 +144,6 @@
       function divisibleBy(n, divisor) {
         return (n % divisor === 0);
       };
-      $(".nav").hover(
-        function() {
-          $(".instructions").show();
-        },
-        function() {
-          $(".instructions").hide();
-        });
       $("#playGame").click(function() {
         var userFizzRepeat = $("#userFizzNum").val();
         var userBuzzRepeat = $("#userBuzzNum").val();
@@ -174,7 +156,7 @@
         $("#reset").fadeIn();
         $("#currentNumber").css("background-color","green");
         $("#instructionKeep").css("text-align","center");
-      });
+      })
       $(".icons").click(function() {
         var fizzNum = $("#userFizzNum").val();
         var buzzNum = $("#userBuzzNum").val();
@@ -255,17 +237,17 @@
 </head>
 
 <body>
-  <h1 class="nav" id="topNav">FizzBuzzable</h1>
-  <h2 class="nav" id="topNavSubHeader">Create and play your own custom game of FizzBuzz!<h2>
+  <h1 id="topNav">FizzBuzzable</h1>
+  <h2 id="topNavSubHeader">Create and play your own custom game of FizzBuzz!<h2>
   <h3 id="instructionsHeader" style="font-weight: bolder">Instructions:</h3>
-  <div class="instructions" id="instructionsHidden">
-    1. Select a denominator for FIZZ: <input class="fields" type="number" value=3 id="userFizzNum"><br><br>
-    2. Select a denominator for BUZZ:  <input class="fields" type="number" value=5 id="userBuzzNum"><br><br>
+  <div class="instructions" id="instructionsFade">
+    1. Select a denominator for FIZZ: <input class="fields" type="number" value=1 id="userFizzNum"><br><br>
+    2. Select a denominator for BUZZ:  <input class="fields" type="number" value=1 id="userBuzzNum"><br><br>
     3. When the game starts, you'll see a number in green.<br><br></div>
-    <div class="instructions" id="instructionsShown"><b>Click FIZZ</b> if the next number is divisible by <a id="userSelectFizz">3.</a><b> Click BUZZ</b> if the next number is divisible by <a id="userSelectBuzz">5.</a><br><b>Click FIZZBUZZ</b> if the next number is divisible by both <a id="userSelectFizz">3</a> and <a id="userSelectBuzz">5.</a> Otherwise, <b>click the next number!</b></div>
+    <div class="instructions" id="instructionKeep">Click <b>FIZZ</b> if the next number is divisible by <a id="userSelectFizz">your fizz number</a>,<b> BUZZ</b> if the next number is divisible by <a id="userSelectBuzz">your buzz number</a>, and <br><b>FIZZBUZZ</b> if the next number is divisible by both.  Otherwise, click the next number!</div>
   <div id="readyMessage"><center><p style="font-size:50px"><b style="font-family:acme">Are you ready to play?<b></p>
   <input type="submit" id="playGame" value="Start Your Game!"></div></center>
-  <center><input type="submit" class="confirm" id="reset" value="Change My Numbers"></center><br>
+  <center><input style="display:none" type="submit" class="confirm" id="reset" value="Reset My Selections"></center><br>
   <!--Add icons and ids for the game. When clicked, the game will indicate right/wrong and move on to the next counter.-->
   <center>
     <hr>

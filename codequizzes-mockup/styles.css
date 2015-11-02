@@ -1,0 +1,41 @@
+body {
+  font-family: monospace;
+}
+h1 {
+  font-size: 80px;
+  text-align: center;
+}
+h2 {
+  font-size: 50px;
+}
+li {
+  margin-bottom: 8px;
+}
+.cards {
+  margin-left: 100px;
+  height: 300px;
+  width:230px;
+  border-color: white;
+  color: white;
+  float:left;
+}
+.front {
+  font-size: 30px;
+  background-color: #011E25;
+  text-align: center;
+}
+.frontHeader {
+  margin-top: 50px;
+  font-size: 60px;
+}
+.frontContent {
+  margin-top: 35px;
+}
+.back {
+  background-color: #365358;
+}
+.backContent {
+  margin-left: 10px;
+  margin-top: 20px;
+  padding:2px;
+}

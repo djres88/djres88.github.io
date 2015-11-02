@@ -20,7 +20,7 @@ $(document).ready(function() {
   $(".icons").click(function() {
     var fizzNum = Number$("#userFizzNum").val();
     var buzzNum = Number$("#userBuzzNum").val();
-    var displayCurrent = FizBuzz.run(FizBuzz.count+1,fizzNum,buzzNum)
+    var displayCurrent = FizBuzz.run(FizBuzz.count+1, fizzNum, buzzNum)
     FizzBuzz.count += 1;
     $('#currentNumber').text(displayCurrent);
     $('#nextNumberIcon').text(FizzBuzz.count+1);

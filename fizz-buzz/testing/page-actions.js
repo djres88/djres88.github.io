@@ -1,6 +1,25 @@
 $(document).ready(function() {
-  $(".nav").hover(function() {
-    $(".instructions").show("slow");
+  var count = 0;
+
+  $(".nav").mouseover(function() {
+    $(".instructions").show("slow")
+    .mouseleave(function() {
+      $(".instructions").hide("slow")
+    });
+  });
+
+  $("#reset").click(function() {
+    displayCurrent = 0;
+    count = 0;
+    $('#currentNumber').text(displayCurrent).css("background-color","red");
+    $('#nextNumberIcon').text(count + 1);
+    $('#instructionsFade').fadeIn();
+    $("#playGame").fadeIn().css("background-color","red");
+    $("#instructions").fadeIn();
+    $("#instructionsHeader").fadeIn();
+    $("#readyMessage").fadeIn();
+    $("#reset").fadeOut();
+    $("#instructionKeep").css("text-align","left");
   });
 
   $("#playGame").click(function() {
@@ -18,43 +37,36 @@ $(document).ready(function() {
   });
 
   $(".icons").click(function() {
-    var fizzNum = Number($("#userFizzNum").val());
-    var buzzNum = Number($("#userBuzzNum").val());
-    var displayCurrent = FizBuzz.run(FizBuzz.count+1, fizzNum, buzzNum)
-    FizzBuzz.count += 1;
-    $('#currentNumber').text(displayCurrent);
-    $('#nextNumberIcon').text(FizzBuzz.count+1);
-  });
-
-/*
-    if ((FizzBuzz.divisibleBy(count+1, Number(fizzNum))) && (FizzBuzz.divisibleBy(count+1, Number(buzzNum)))) {
-      displayCurrent = "FizzBuzz";
-      $("#currentNumber").animate({height: "50%", width: "50%"}, 200).animate({height: "25%", width: "25%"}, 200)
-    } else if (FizzBuzz.divisibleBy(count+1, Number(fizzNum))) {
-      displayCurrent = "Fizz";
-      $("#currentNumber").animate({
-        height: "17%",
-        width: "12%"
-      })
-    } else if (FizzBuzz.divisibleBy(count+1, Number(buzzNum))) {
-      displayCurrent = "Buzz";
-      $("#currentNumber").animate({
-        height: "17%",
-        width: "12%"
-      })
-    } else {
-      displayCurrent = count + 1;
-      $("#currentNumber").animate({
-        height: "17%",
-        width: "12%"
-      })
-    };
+    var fizzNum = $("#userFizzNum").val();
+    var buzzNum = $("#userBuzzNum").val();
+    var displayCurrent = FizzBuzz.run((count+1), Number(fizzNum), Number(buzzNum));
     count += 1;
     $('#currentNumber').text(displayCurrent);
     $('#nextNumberIcon').text(count+1);
+    if (displayCurrent === "FizzBuzz") {
+      $("#currentNumber").animate({
+        height: "50%",
+        width: "50%"})
+      .animate({
+        height: "25%",
+        width: "25%"})
+    } else if (displayCurrent === "Fizz") {
+      $("#currentNumber").animate({
+        height: "18%",
+        width: "12%"})
+    } else if (displayCurrent === "Buzz") {
+      $("#currentNumber").animate({
+        height: "18%",
+        width: "12%"})
+    } else {
+      $("#currentNumber").animate({
+        height: "18%",
+        width: "12%"})
+    };
   });
-*/
-  /* Tests depending on user's click */
+
+
+  // Tests depending on user's click
   $("#fizzIcon").click(function() {
     if(displayCurrent === "Fizz"){
       // Think the jQuery animations are in a separate source file... Use alert as temporary code to test the if/else statement.
@@ -87,17 +99,5 @@ $(document).ready(function() {
       alert("incorrect")
     }
   });
-  $("#reset").click(function() {
-    displayCurrent = 0;
-    count = 0;
-    $('#currentNumber').text(displayCurrent).css("background-color","red");
-    $('#nextNumberIcon').text(count + 1);
-    $('#instructionsFade').fadeIn();
-    $("#playGame").fadeIn().css("background-color","red");
-    $("#instructions").fadeIn();
-    $("#instructionsHeader").fadeIn();
-    $("#readyMessage").fadeIn();
-    $("#reset").fadeOut();
-    $("#instructionKeep").css("text-align","left");
-  });
+
 });

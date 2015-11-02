@@ -1,3 +1,8 @@
+var Counts = {
+  count: 0;
+}
+
+
 var FizzBuzz = {
   divisibleBy: function(n, divisor) {
     return (n % divisor === 0);

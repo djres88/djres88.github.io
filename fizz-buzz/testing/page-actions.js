@@ -1,9 +1,8 @@
 $(document).ready(function() {
-  var count = 0;
-  $(".nav").hover(
-    function() {
-      $(".instructions").show("slow");
-    });
+  $(".nav").hover(function() {
+    $(".instructions").show("slow");
+  });
+
   $("#playGame").click(function() {
     var userFizzRepeat = $("#userFizzNum").val();
     var userBuzzRepeat = $("#userBuzzNum").val();
@@ -17,9 +16,17 @@ $(document).ready(function() {
     $("#currentNumber").css("background-color","green");
     $("#instructionKeep").css("text-align","center");
   });
+
   $(".icons").click(function() {
-    var fizzNum = $("#userFizzNum").val();
-    var buzzNum = $("#userBuzzNum").val();
+    var fizzNum = Number$("#userFizzNum").val();
+    var buzzNum = Number$("#userBuzzNum").val();
+    var displayCurrent = FizBuzz.run(FizBuzz.count+1,fizzNum,buzzNum)
+    FizzBuzz.count += 1;
+    $('#currentNumber').text(displayCurrent);
+    $('#nextNumberIcon').text(FizzBuzz.count+1);
+  });
+
+/*
     if ((FizzBuzz.divisibleBy(count+1, Number(fizzNum))) && (FizzBuzz.divisibleBy(count+1, Number(buzzNum)))) {
       displayCurrent = "FizzBuzz";
       $("#currentNumber").animate({height: "50%", width: "50%"}, 200).animate({height: "25%", width: "25%"}, 200)
@@ -46,6 +53,7 @@ $(document).ready(function() {
     $('#currentNumber').text(displayCurrent);
     $('#nextNumberIcon').text(count+1);
   });
+*/
   /* Tests depending on user's click */
   $("#fizzIcon").click(function() {
     if(displayCurrent === "Fizz"){

@@ -13,22 +13,6 @@ h1 {
 h2 {
   margin-top: -20px;
 }
-.confirm {
-}
-.icons {
-  border: 5px;
-  width: 140px;
-  height: 100px;
-  font-family: acme;
-  font-size: 20px;
-  margin: 30px;
-  margin-top: 10px;
-  text-align:center;
-  background-color: lightgray;
-}
-.nav {
-  /*for jQuery anim only*/
-}
 #topNav {
   text-align: center;
   background-color: #81F7F3;
@@ -45,15 +29,25 @@ h2 {
   margin-bottom: 50px;
   text-align:center;
 }
-#instructionsHeader {
-  display:none;
-  font-family: acme;
-  font-size: 28px;
-}
 .instructions {
   display:none;
   margin-left: 15px;
   font-size: 20px;
+}
+#instructionsHeader {
+  font-family: acme;
+  font-size: 28px;
+}
+.icons {
+  border: 5px;
+  width: 140px;
+  height: 100px;
+  font-family: acme;
+  font-size: 20px;
+  margin: 30px;
+  margin-top: 10px;
+  text-align:center;
+  background-color: lightgray;
 }
 .fields {
   font-size: 20px;
@@ -74,6 +68,7 @@ h2 {
   height: 100px;
 }
 #reset {
+  display: none;
   font-family: acme;
   color: white;
   background-color: red;
@@ -95,12 +90,12 @@ h2 {
   font-family: acme;
   background-color:gray;
   color:white;
-  padding-bottom: -3px;
+  padding-bottom: -5px;
   margin-bottom:-35px;
   text-align: center;
   border-radius:50%;
-  height: 110px;
-  width: 168px;
+  height: 100px;
+  width: 320px;
   font-size: 80px;
 }
 #nextNumberMessage{
@@ -112,18 +107,6 @@ h2 {
   font-style: italic;
   font-size: 20px;
   margin-top: -10px;
-}
-#nextNumberIcon {
-  background-color: red;
-}
-#fizzIcon {
-  background-color: yellow;
-}
-#buzzIcon {
-  background-color: green;
-}
-#fizzBuzzIcon {
-  background-color: blue;
 }
 .images {
 }

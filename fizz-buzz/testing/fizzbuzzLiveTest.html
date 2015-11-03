@@ -16,12 +16,19 @@
 <body>
   <h1 class="nav" id="topNav">FizzBuzzable</h1>
   <h2 class="nav" id="topNavSubHeader">Create and play your own custom game of FizzBuzz!<h2>
-  <h3 id="instructionsHeader" style="font-weight: bolder">Instructions:</h3>
-  <div class="instructions" id="instructionsHidden">
-    1. Select a denominator for FIZZ: <input class="fields" type="number" value=3 id="userFizzNum"><br><br>
-    2. Select a denominator for BUZZ:  <input class="fields" type="number" value=5 id="userBuzzNum"><br><br>
-    3. When the game starts, you'll see a number in green.<br><br></div>
-    <div class="instructions" id="instructionsShown"><b>Click FIZZ</b> if the next number is divisible by <a id="userSelectFizz">3.</a><b> Click BUZZ</b> if the next number is divisible by <a id="userSelectBuzz">5.</a><br><b>Click FIZZBUZZ</b> if the next number is divisible by both <a id="userSelectFizz">3</a> and <a id="userSelectBuzz">5.</a> Otherwise, click the next number!</div>
+
+  <div class="instructions">
+    <h3 id="instructionsHeader" style="font-weight: bolder">Instructions:</h3>
+        <p id="instruction1">
+          1. Select a denominator for FIZZ: <input class="fields" type="number" value=3 id="userFizzNum"><br>
+        </p>
+        <p id="instruction2">
+          2. Select a denominator for BUZZ:  <input class="fields" type="number" value=5 id="userBuzzNum"><br>
+        </p>
+        <p id="instruction3">
+          3. When the game starts, you'll see a number in green. <b>Click FIZZ</b> if the next number is divisible by <a id="userSelectFizz">3.</a><b> Click BUZZ</b> if the next number is divisible by <a id="userSelectBuzz">5.</a><br><b>Click FIZZBUZZ</b> if the next number is divisible by both <a id="userSelectFizz">3</a> and <a id="userSelectBuzz">5.</a> Otherwise, click the next number!
+        </p>
+    </div>
 
   <div id="readyMessage"><center><p style="font-size:50px"><b style="font-family:acme">Are you ready to play?<b></p>
   <input type="submit" id="playGame" value="Start Your Game!"></div></center>

@@ -1,0 +1,117 @@
+li {
+  list-style-type: none;
+}
+
+.aboveFold {
+  background-image: url(http://img.thesun.co.uk/aidemitlum/archive/01085/Labrador_in-car_68_1085457a.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 800px;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-attachment: fixed;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+}
+
+.aboveFold .container {
+  color: white;
+  top: 36%;
+  position: relative;
+  text-align: center;
+}
+
+.aboveFold .container h1 {
+  -webkit-text-stroke: 1px white;
+  font-size: 50px;
+  color: brown;
+}
+
+.aboveFold .container .row {
+  margin-right: 120px;
+  margin-left: 120px;
+}
+
+.btn {
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin-top: 4px;
+  background-color: lightgray;
+  color: black;
+  width: 180px;
+}
+
+.bio {
+  height: 600px;
+  text-align: left;
+  background-color: #3B0160;
+  color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  font-size: 23px;
+}
+
+.section-header {
+  margin-top: 50px;
+  font-size: 40px;
+}
+
+#profilePic {
+  width: 50%;
+  max-width: 200px;
+}
+
+.projects {
+  height: 800px;
+  background-image: url(http://i.space.com/images/i/000/015/590/wW4/atlas-launch-muos-1920.jpg?1330542179);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-attachment: fixed;
+  color: white;
+}
+
+.blog {
+  height: 600px;
+  background-color: #3B0160;
+  color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 50%;
+}
+
+.connect {
+  height: 600px;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/f/f4/Actor_portraying_Alexander_Graham_Bell_in_an_AT%26T_promotional_film_\(1926\).jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-attachment: fixed;
+  color: white;
+  text-align: center;
+}
+
+footer {
+  height: 150px;
+
+}
+
+#footerList {
+  margin-top: 20px;
+}
+
+.projects img {
+  max-width: 100%;
+  height: auto;
+  padding: 10px;
+}
+
+#connectMsg {
+  margin-top: 160px;
+}

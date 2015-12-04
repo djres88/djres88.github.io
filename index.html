@@ -1,26 +1,159 @@
 <!DOCTYPE html>
 <html>
+
   <head>
-    <meta>
-    <title>David's Homepage</title>
-    <style media="screen">
-      h2 {
-        margin-left: -15px;
-      }
-      h3 {
-        margin-left: 40px;
-      }
-    </style>
+    <meta charset="utf-8">
+    <title>David's Portfolio</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css">
+
+    <!--Main document style sheets-->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
   </head>
+
   <body>
-    <center><h1>David's Homepage</h1></center>
-    <ul><h2>Current Sites</h2></ul>
-      <li><h3>FizzBuzz: <a href="http://djres88.github.io/fizz-buzz/fizzbuzz">Play Custom FizzBuzz Games</a></h3></li><br>
-    <ul><h2>Sites in Progress</h2></ul>
-      <li><h3>CodeQuizzes JS Book (Homepage Design): <a href="http://djres88.github.io/codequizzes/js-book-homepage">Link</a></h3></li>
-      <li><h3>Fantasy Football: <a href=#>Compare Players</a></h3></li>
-      <li><h3>Presidential Election Game: <a href=#>Meet the Candidates</a></h3></li>
-    <h3>Images</h3>
-    <img src="http://djres88.github.io/images/fizzbuzz.jpg" />
+    <!--navbar-->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" style="color:lightgray" data-toggle="collapse" data-target="#myNavbar"><i class="fa fa-bars"></i>
+          </button>
+          <a class="navbar-brand pull-left" href="#">David Resnick</a>
+        </div>
+        <div id="myNavbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#connect">Connect</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--end navbar-->
+    <!--above-fold-->
+    <div class="aboveFold">
+      <div class="container">
+        <h1>Getting to Work</h1>
+         <hr />
+          <div class="row">
+            <div class="col-md-4"><a target="_blank" href="https://github.com/djres88" class="btn btn-main"><i class="fa fa-github"></i> Github</a></div>
+            <div class="col-md-4"><a target="_blank" href="https://www.linkedin.com/in/david-resnick-088b2822"  class="btn btn-main"><i class="fa fa-linkedin"></i> LinkedIn</a></div>
+            <div class="col-md-4"><a target="_blank" href="http://www.freecodecamp.com/djres88" class="btn btn-main"><i class="fa fa-fire"></i> freeCodeCamp</a></div>
+          </div>
+      </div>
+    </div>
+    <!--end above-fold-->
+    <!--bio-->
+    <div class="bio" id="about">
+      <div class="container">
+        <h2 class="section-header">David</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <p>bio goes here bio goes here bio goes here bio goes here bio goes here bio goes here bio goes here bio goes here bio goes here bio goes here bio goes here bio goes here bio goes here bio goes here bio goes here bio goes here bio goes here bio goes here bio goes here bio goes here bio goes here bio goes here bio goes here bio goes here </p>
+          </div>
+          <div class="col-md-6">
+           <img id="profilePic" class="center-block img-responsive"  src="https://avatars1.githubusercontent.com/u/14188320?v=3&s=460" alt="Profile Pic Missing" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--end bio-->
+    <!--projects-->
+    <div class="projects" id="projects">
+      <div class="container">
+      <h2 class="section-header">Projects</h2>
+        <div class="row projects">
+          <div class="project-image col-md-3 col-xs-6">
+            <a href="djres88.github.io/images/fizzbuzz.jpg"><img class="img-responsive" src="http://djres88.github.io/images/fizzbuzz.jpg" alt="FizzBuzz" />
+              <div class="project-image-overlay">
+                <h4 class="project-image-overlay-header">FizzBuzzable</h4>
+                <p class="project-image-overlay-description">Interactive/custom FizzBuzz games</p>
+              </div>
+            </a>
+          </div>
+          <div class="project-image col-md-3 col-xs-6">
+            <a href="#"><img class="img-responsive" src="https://s-media-cache-ak0.pinimg.com/736x/39/33/62/3933621dffc584e5783816f09df72103.jpg" alt="Fantasy Football Lineup Optimizer" />
+              <div class="project-image-overlay">
+                <h4 class="project-image-overlay-header">Fantasy Lineup Optimizers</h4>
+                <p class="project-image-overlay-description">Calculate the ideal lineup</p>
+              </div>
+            </a>
+          </div>
+          <div class="project-image col-md-3 col-xs-6">
+            <a href="#"><img class="img-responsive" src="http://www.ctnewsjunkie.com/images/made/upload/2015/10/qpoll-presidential-candidates-2016_488_488_99.jpg" alt="Presidential Candidate Quote Generator" />
+              <div class="project-image-overlay">
+                <h4 class="project-image-overlay-header">Candidate Quote Generator</h4>
+                <p class="project-image-overlay-description">Real or Made Up?</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--end projects-->
+    <!--blog-->
+    <div class="blog" id="blog">
+      <div class="container">
+        <h2 class="section-header">Blog</h2>
+        <h3>Coming Soon!</h3>
+        </div>
+      </div>
+    </div>
+    <!--end blog-->
+    <!--connect-->
+    <div class="connect" id="connect">
+      <div class="container">
+        <h2 class="section-header" id="connectMsg">Yeah, what?</h2>
+        <div class="row">
+          <div class="col-md-6 pull-right">
+            <h3>Connect with me by email at</h3>
+            <a href="davidj.resnick@gmail.com" style="color:white"><h3 style="font-weight:bold">davidj.resnick@gmail.com</h3></a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 pull-right">
+          <h3>Or check out my links:</h3>
+            <div class="col-md-12">
+              <a target="_blank" href="https://github.com/djres88" class="btn btn-connect"><i class="fa fa-github"></i> Github</a>
+            </div>
+            <div class="col-md-12">
+              <a target="_blank" href="https://www.linkedin.com/in/david-resnick-088b2822" class="btn btn-connect"><i class="fa fa-linkedin"></i> LinkedIn</a>
+            </div>
+            <div class="col-md-12">
+              <a target="_blank" href="http://www.freecodecamp.com/djres88" class="btn btn-connect"><i class="fa fa-fire"></i> freeCodeCamp</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--end connect-->
+    <!--footer-->
+    <footer class="navbar-inverse">
+      <div class=container>
+        <div class=row>
+          <div class=col-md-4>
+            <ul class="list" id="footerList">
+              <li><a href="#home" style="color:white">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#blog">Blog</a></li>
+              <li><a href="#connect">Connect</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--end footer-->
   </body>
 </html>

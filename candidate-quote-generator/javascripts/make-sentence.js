@@ -27,7 +27,7 @@ function generateSentence() {
   return mySentence.join(" ");
 }
 
-function conjugateVerb(subject) {
+function conjugate(subject) {
   if (mySubject === "first") {
     myVerb = myVerb[0];
   } if (mySubject === "second") {

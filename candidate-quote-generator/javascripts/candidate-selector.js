@@ -1,9 +1,9 @@
-var candidate = ["Hillary Clinton", "Donald Trump", "Bernie Sanders", "Ted Cruz"];
+var candidateList = ["Hillary Clinton", "Donald Trump", "Bernie Sanders", "Ted Cruz"];
 
 var words = [
   {
   word: "test",
-  candidates: ["hillary-clinton"]
+  candidate: ["hillary-clinton"]
   },
   {
   word: "test",
@@ -11,8 +11,8 @@ var words = [
   }
 ];
 
-var myCandidate = getRandom(candidate);
+var myCandidate = getRandom(candidateList);
 
-var candidateWords = words.filter(function(key) {
+var myWords = words.filter(function(key) {
   return key.candidates.indexOf(myCandidate) !== -1;
 });

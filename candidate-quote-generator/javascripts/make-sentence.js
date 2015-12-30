@@ -1,12 +1,15 @@
-var adjective = ["typical"];
-var subject = ["I", "you", "we"];
-var adverb = ["slowly"];
-var verb = ["walk"];
-var object = ["the wall"];
+// testing
+// var adjective = ["typical"];
+// var subject = ["I", "you", "we"];
+// var adverb = ["slowly"];
+// var verb = ["walk"];
+// var object = ["the wall"];
 
 var sentenceType = [
-  ["subject"] + " " + ["adverb"] + " " + ["verb"] + " " + ["adjective"] + " " + ["object"],
-  ["subject"] + " " + ["verb"] + " " + ["object"]
+  "subject adverb verb adjective object",
+  "subject verb object, and the subject verb object",
+  "adjective subject verb object",
+  "subject only verb when subject verb object"
 ];
 
 function generateSentence() {
@@ -20,7 +23,7 @@ function generateSentence() {
       mySentence[i] = getRandom(adverb);
     } if (mySentence[i] === "verb") {
       mySentence[i] = getRandom(verb);
-    } else if (mySentence[i] === "object") {
+    } if (mySentence[i] === "object") {
       mySentence[i] = getRandom(object);
     }
   };

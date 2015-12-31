@@ -1,15 +1,20 @@
 // testing
-// var adjective = ["typical"];
-// var subject = ["I", "you", "we"];
-// var adverb = ["slowly"];
-// var verb = ["walk"];
-// var object = ["the wall"];
+var adjective = ["typical", "radical", "Islamist", "unbelievable"];
+var subject = ["I", "you", "we", "Obama", "ISIS", "debt"];
+var adverb = ["slowly", "quickly", "repeatedly"];
+var verb = ["build", "blow up", "need", "fire", "glow"];
+var object = ["wall", "debt ceiling", "the White House"];
 
 var sentenceType = [
   "subject adverb verb adjective object",
-  "subject verb object, and the subject verb object",
-  "adjective subject verb object",
-  "subject only verb when subject verb object"
+  "subject verb object and the subject verb object",
+  "subject verb object",
+  "subject only verb when subject verb object",
+  "The adjective subject cannot verb",
+  "We need to verb the adjective object",
+  "I promise to verb our object",
+  "subject verb object",
+  "subject must adverb verb object"
 ];
 
 function generateSentence() {
@@ -27,7 +32,9 @@ function generateSentence() {
       mySentence[i] = getRandom(object);
     }
   };
-  return mySentence.join(" ");
+  mySentence = mySentence.join(" ");
+  mySentence = mySentence.charAt(0).toUpperCase() + mySentence.slice(1) + ".";
+  return mySentence;
 }
 
 function conjugate(subject) {

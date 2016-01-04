@@ -19,21 +19,22 @@ var noun = [
 ]
 // indicate in noun-object whether the object needs an article? Already need to say whether singular/plural...
 var adverb = ["slowly", "quickly", "repeatedly"];
-//need verb constructor
+
+
 var verb = [
   {
-    "first": "build",
-    "second": "build",
-    "third": "builds",
-    "first-plural": "build",
-    "third-plural": "build"
+    first: "build",
+    second: "build",
+    third: "builds",
+    firstPlural: "build",
+    thirdPlural: "build"
   },
   {
-    "first": "glow",
-    "second": "glow",
-    "third": "glows",
-    "first-plural": "glow",
-    "third-plural": "glow"
+    first: "glow",
+    second: "glow",
+    third: "glows",
+    firstPlural: "glow",
+    thirdPlural: "glow"
   }
 ]
 

@@ -13,5 +13,5 @@ var adverb = [
   "then",
   "there",
   "together",
-  "too",
+  "too"
 ];

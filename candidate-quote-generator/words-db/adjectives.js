@@ -36,6 +36,7 @@ var adjective = [
   "merry",
   "new",
   "next",
+  "no",
   "only",
   "public",
   "radical",

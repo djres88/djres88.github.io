@@ -50,7 +50,7 @@ var generateSentence = function() {
 
 var formatSentence = function(sentence) {
   sentence = sentence.join(" ");
-  sentence = sentence.replace(" ,",",");
+  sentence = sentence.replace(/ ,/g, ",");
 
   if (/what|which|when|where|who| how/g.test(sentence)) {
     var punctuation = "?";

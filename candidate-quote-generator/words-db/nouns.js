@@ -285,11 +285,6 @@ var noun = [
   person: "thirdPlural"
   },
   {
-  word: "no",
-  needsArticle: "no",
-  person: "third"
-  },
-  {
   word: "North Carolina",
   needsArticle: "no",
   person: "third"

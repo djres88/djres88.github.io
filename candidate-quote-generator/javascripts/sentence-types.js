@@ -8,7 +8,6 @@ var sentenceType = [
   "noun-subject verb noun",
   "noun-subject adverb verb noun",
   "adverb and adverb , noun-subject verb adjective noun",
-  "adverb but adverb , noun-subject verb noun",
   "Not noun but noun-subject verb noun",
   "noun-subject verb noun and noun",
   "noun-subject — such as adjective noun — verb noun",
@@ -22,7 +21,10 @@ var sentenceType = [
   "noun said that noun-subject verb noun",
   //note: for formatting reasons, commas should be preceded by a space
   "According to noun , noun-subject adverb verb noun",
-  "adverb noun-subject verb noun"
+  "adverb, noun-subject verb noun",
+  "noun, noun, and noun are adjective",
+  "Our noun-subject is not adjective",
+  "noun and noun are adjective"
 ];
 
 // //node

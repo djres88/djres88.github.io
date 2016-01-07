@@ -10,6 +10,5 @@ var adverb = [
   "now",
   "really",
   "soundly",
-  "together",
-  "too"
+  "together"
 ];

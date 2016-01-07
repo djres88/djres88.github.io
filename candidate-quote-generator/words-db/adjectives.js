@@ -1,5 +1,5 @@
 var adjective = [
-  "1st",
+  "first",
   "able",
   "amazing",
   "beaten",

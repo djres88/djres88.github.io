@@ -180,6 +180,11 @@ var noun = [
   person: "third"
   },
   {
+  word: "immigrants",
+  needsArticle: "no",
+  person: "third"
+  },
+  {
   word: "incompetence",
   needsArticle: "no",
   person: "third"
@@ -241,6 +246,11 @@ var noun = [
   },
   {
   word: "media",
+  needsArticle: "yes",
+  person: "third"
+  },
+  {
+  word: "Mexico",
   needsArticle: "yes",
   person: "third"
   },
@@ -362,6 +372,11 @@ var noun = [
   {
   word: "puppets",
   needsArticle: "yes",
+  person: "thirdPlural"
+  },
+  {
+  word: "rapists and murderers",
+  needsArticle: "no",
   person: "thirdPlural"
   },
   {
@@ -496,6 +511,16 @@ var noun = [
   },
   {
   word: "voters",
+  needsArticle: "no",
+  person: "thirdPlural"
+  },
+  {
+  word: "wall",
+  needsArticle: "yes",
+  person: "third"
+  },
+  {
+  word: "walls",
   needsArticle: "no",
   person: "thirdPlural"
   },

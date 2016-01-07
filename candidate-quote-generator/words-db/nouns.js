@@ -182,7 +182,7 @@ var noun = [
   {
   word: "immigrants",
   needsArticle: "no",
-  person: "third"
+  person: "thirdPlural"
   },
   {
   word: "incompetence",
@@ -240,18 +240,13 @@ var noun = [
   person: "third"
   },
   {
-  word: "me",
-  needsArticle: "no",
-  person: "third"
-  },
-  {
   word: "media",
   needsArticle: "yes",
   person: "third"
   },
   {
   word: "Mexico",
-  needsArticle: "yes",
+  needsArticle: "no",
   person: "third"
   },
   {

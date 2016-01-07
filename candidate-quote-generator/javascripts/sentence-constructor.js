@@ -51,7 +51,7 @@ var generateSentence = function() {
 var formatSentence = function(sentence) {
   sentence = sentence.join(" ");
 
-  if (/what|which|when|where|how|who/g.test(sentence)) {
+  if (/ what | which | when | where | how | who /g.test(sentence)) {
     var punctuation = "?";
   } else {
     var punctuation = ".";

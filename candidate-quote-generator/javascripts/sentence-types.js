@@ -7,8 +7,10 @@ var sentenceType = [
   "noun-subject verb noun adverb",
   "noun-subject adverb verb noun",
   "adverb and adverb — noun-subject verb adjective noun",
-  "noun-subject verb noun — noun and adjective noun",
+  "adverb but adverb — noun-subject verb noun",
+  "Not noun but noun-subject verb noun"
   "noun-subject verb noun and noun adverb",
+  "noun-subject — adjective noun — verb noun",
   "adjective noun-subject verb noun",
   "adjective noun-subject adverb verb noun",
   "adjective noun-subject verb adjective noun",

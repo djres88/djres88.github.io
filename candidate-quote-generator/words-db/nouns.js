@@ -421,7 +421,7 @@ var noun = [
   },
   {
   word: "stamina",
-  needsArticle: "no",
+  needsArticle: "yes",
   person: "third"
   },
   {

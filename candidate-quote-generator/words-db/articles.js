@@ -30,6 +30,7 @@ var articlesEtc = {
     "such",
     "their",
     "those",
-    "which"
+    "which",
+    "two"
   ]
 };

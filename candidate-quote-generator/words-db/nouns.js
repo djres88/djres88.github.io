@@ -15,16 +15,6 @@ var noun = [
   person: "third"
   },
   {
-  word: "my America",
-  needsArticle: "no",
-  person: "third"
-  },
-  {
-  word: "your America",
-  needsArticle: "no",
-  person: "third"
-  },
-  {
   word: "Reagan",
   needsArticle: "no",
   person: "third"
@@ -121,7 +111,7 @@ var noun = [
   },
   {
   word: "debate",
-  needsArticle: "no",
+  needsArticle: "yes",
   person: "third"
   },
   {
@@ -548,11 +538,6 @@ var noun = [
   word: "weeks",
   needsArticle: "no",
   person: "thirdPlural"
-  },
-  {
-  word: "who",
-  needsArticle: "no",
-  person: "third"
   },
   {
   word: "women",

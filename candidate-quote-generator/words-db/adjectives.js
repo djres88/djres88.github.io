@@ -58,7 +58,6 @@ var adjective = [
   "tough",
   "tremendous",
   "trying",
-  "two",
   "united",
   "used",
   "unbelievable",

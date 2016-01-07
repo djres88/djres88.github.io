@@ -42,11 +42,11 @@ var verb = [
   thirdPlural: "are beating"
   },
   {
-  first: "believe",
-  second: "believe",
-  third: "believes",
-  firstPlural: "believe",
-  thirdPlural: "believe"
+  first: "believe in",
+  second: "believes in",
+  third: "believes in",
+  firstPlural: "believe in",
+  thirdPlural: "believe in"
   },
   {
   first: "bring",

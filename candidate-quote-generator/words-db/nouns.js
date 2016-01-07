@@ -5,6 +5,31 @@ var noun = [
   person: "third"
   },
   {
+  word: "America",
+  needsArticle: "no",
+  person: "third"
+  },
+  {
+  word: "our country",
+  needsArticle: "no",
+  person: "third"
+  },
+  {
+  word: "my America",
+  needsArticle: "no",
+  person: "third"
+  },
+  {
+  word: "your America",
+  needsArticle: "no",
+  person: "third"
+  },
+  {
+  word: "Reagan",
+  needsArticle: "no",
+  person: "third"
+  },
+  {
   word: "25k",
   needsArticle: "no",
   person: "third"

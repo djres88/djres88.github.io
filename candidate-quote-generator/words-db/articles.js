@@ -20,7 +20,7 @@ var articlesEtc = {
     "his",
     "her",
     "its",
-    "least",
+    "the least",
     "more",
     "most",
     "other",

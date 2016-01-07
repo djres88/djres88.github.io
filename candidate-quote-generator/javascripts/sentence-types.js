@@ -1,4 +1,5 @@
-//The following array includes several potential sentence types. The SENTENCE GENERATOR -- see function below -- randomly selects one of these types before filling in the sentence with words from a random candidate's Twitter feed. You can add new sentence types to the end of the array (but don't forget the commas).
+//The following array includes several potential sentence types. The SENTENCE GENERATOR -- see function below -- randomly selects one of these types before filling in the sentence with words from a random candidate's Twitter feed. You can add new sentence types to the end of the array (but don't forget the commas). NOTE: for formatting reasons, commas should be preceded by a space.
+
 var sentenceType = [
   "noun-subject adverb verb adjective noun",
   "noun-subject verb noun",
@@ -19,10 +20,9 @@ var sentenceType = [
   "I am adjective",
   "noun-subject means noun-subject",
   "noun said that noun-subject verb noun",
-  //note: for formatting reasons, commas should be preceded by a space
   "According to noun , noun-subject adverb verb noun",
-  "adverb, noun-subject verb noun",
-  "noun, noun, and noun are adjective",
+  "Adverb , noun-subject verb noun",
+  "noun , noun , and noun are adjective",
   "Our noun-subject is not adjective",
   "noun and noun are adjective"
 ];

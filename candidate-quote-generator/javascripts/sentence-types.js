@@ -21,7 +21,7 @@ var sentenceType = [
   "noun-subject means noun-subject",
   "noun said that noun-subject verb noun",
   "According to noun , noun-subject adverb verb noun",
-  "Adverb , noun-subject verb noun",
+  "adverb , noun-subject verb noun",
   "noun , noun , and noun are adjective",
   "Our noun-subject is not adjective",
   "noun and noun are adjective"

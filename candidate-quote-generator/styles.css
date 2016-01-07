@@ -16,7 +16,16 @@ body {
 }
 
 .title-headers {
-  -webkit-text-stroke: 1.5px gray;
+  color: black;
+  -webkit-text-stroke: 1px yellow;
+}
+
+h1 {
+  font-size: 80px;
+}
+
+h2 {
+  font-size: 40px;
 }
 
 button {
@@ -47,8 +56,8 @@ button:hover {
 .currentQuote {
   padding: 15px;
   display: none;
-  font-size: 15px;
-  text-align: justify;
+  font-size: 35px;
+  text-align: left;
 }
 
 #speaker {

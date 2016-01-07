@@ -3,14 +3,13 @@ var adverb = [
   "almost",
   "always",
   "badly",
-  "ever",
   "finally",
+  "forever",
   "hopefully",
   "never",
   "now",
   "really",
   "soundly",
-  "there",
   "together",
   "too"
 ];

@@ -10,7 +10,7 @@ var generateSentence = function() {
   var mySentence = getRandom(sentenceType).split(" ");
   // Replace nouns first. To maintain English's "article/possessive- (adjective)- noun" syntax, you need keep the "adjective" strings intact through the initial loop.
   for (var i = 0; i < mySentence.length; i++) {
-    if (mySentence[i] === "noun" || mySentence[i] === "noun-subject") {
+    if (mySentence[i].startsWith("noun")) {
       var myNoun = getRandom(noun);
       var person = myNoun["person"];
       //If the current noun is the subject, grab the subject's person and store for conjugating the verb:
@@ -50,8 +50,9 @@ var generateSentence = function() {
 
 var formatSentence = function(sentence) {
   sentence = sentence.join(" ");
+  sentence = sentence.replace(" ,",",");
 
-  if (/ what | which | when | where | how | who /g.test(sentence)) {
+  if (/what|which|when|where|who| how/g.test(sentence)) {
     var punctuation = "?";
   } else {
     var punctuation = ".";

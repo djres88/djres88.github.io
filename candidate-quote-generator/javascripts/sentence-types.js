@@ -2,14 +2,15 @@
 var sentenceType = [
   "noun-subject adverb verb adjective noun",
   "noun-subject verb noun",
+  "noun-subject verb noun",
   "noun-subject verb adjective noun",
   "I believe noun-subject verb noun",
-  "noun-subject verb noun adverb",
+  "noun-subject verb noun",
   "noun-subject adverb verb noun",
-  "adverb and adverb — noun-subject verb adjective noun",
-  "adverb but adverb — noun-subject verb noun",
-  "Not noun but noun-subject verb noun"
-  "noun-subject verb noun and noun adverb",
+  "adverb and adverb , noun-subject verb adjective noun",
+  "adverb but adverb , noun-subject verb noun",
+  "Not noun but noun-subject verb noun",
+  "noun-subject verb noun and noun",
   "noun-subject — adjective noun — verb noun",
   "adjective noun-subject verb noun",
   "adjective noun-subject adverb verb noun",
@@ -17,6 +18,10 @@ var sentenceType = [
   "Hey, listen, noun-subject verb noun",
   "That is adjective",
   "I am adjective",
+  "noun-subject means noun-subject",
+  "noun said that noun-subject verb noun",
+  //note: for formatting reasons, commas should be preceded by a space
+  "According to noun , noun-subject adverb verb noun",
   "adverb noun-subject verb noun"
 ];
 

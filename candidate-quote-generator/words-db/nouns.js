@@ -96,13 +96,13 @@ var noun = [
   },
   {
   word: "debate",
-  needsArticle: "yes",
+  needsArticle: "no",
   person: "third"
   },
   {
   word: "Des Moines",
   needsArticle: "no",
-  person: "check"
+  person: "third"
   },
   {
   word: "Donald",
@@ -136,7 +136,7 @@ var noun = [
   },
   {
   word: "face",
-  needsArticle: "no",
+  needsArticle: "yes",
   person: "third"
   },
   {
@@ -212,7 +212,7 @@ var noun = [
   {
   word: "Las Vegas",
   needsArticle: "no",
-  person: "check"
+  person: "third"
   },
   {
   word: "leader",
@@ -342,7 +342,7 @@ var noun = [
   {
   word: "police",
   needsArticle: "yes",
-  person: "third"
+  person: "thirdPlural"
   },
   {
   word: "policy",
@@ -507,7 +507,7 @@ var noun = [
   {
   word: "weeks",
   needsArticle: "no",
-  person: "third"
+  person: "thirdPlural"
   },
   {
   word: "who",
@@ -517,7 +517,7 @@ var noun = [
   {
   word: "women",
   needsArticle: "no",
-  person: "third"
+  person: "thirdPlural"
   },
   {
   word: "year",

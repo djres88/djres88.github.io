@@ -1,1 +1,24 @@
-var adverb = ["slowly", "quickly", "repeatedly"];
+var adverb = [
+  "again",
+  "almost",
+  "apart",
+  "badly",
+  "ever",
+  "finally",
+  "hopefully",
+  "needs",
+  "never",
+  "not",
+  "now",
+  "out",
+  "really",
+  "soundly",
+  "then",
+  "there",
+  "together",
+  "too",
+  "very",
+  "war",
+  "when",
+  "why"
+];

@@ -72,7 +72,7 @@ var verb = [
   {
   first: "copy",
   second: "copy",
-  third: "copys",
+  third: "copies",
   firstPlural: "copy",
   thirdPlural: "copy"
   },

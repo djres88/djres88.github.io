@@ -12,18 +12,19 @@ function generateSentence() {
   for (var i = 0; i < mySentence.length; i++) {
     if (mySentence[i] === "noun" || mySentence[i] === "noun-subject") {
       var myNoun = getRandom(noun);
+      var person = myNoun["person"];
       //If the current noun is the subject, grab the subject's person and store for conjugating the verb:
       if (mySentence[i] == "noun-subject") {
-        var conjugation = myNoun["person"];
+        var conjugation = person;
       }
       mySentence[i] = myNoun["word"];
       //Add an article or possessive, if myNoun requires one.
       if (myNoun["needsArticle"] === "yes") {
         //Add the article to accomodate an optional/random adjective in the middle. (English is silly that way: "the car" with an adjective becomes "the green car." That's versus, say, Spanish, where the adjective is just tagged onto the end: "el coche" becomes "el coche verde.")
         if (mySentence[i-1] === "adjective") {
-          mySentence.splice(i-1, 0, getRandom(articlesEtc));
+          mySentence.splice(i-1, 0, getRandom(articlesEtc[person]));
         } else {
-          mySentence.splice(i, 0, getRandom(articlesEtc));
+          mySentence.splice(i, 0, getRandom(articlesEtc[person]));
         }
       }
     }

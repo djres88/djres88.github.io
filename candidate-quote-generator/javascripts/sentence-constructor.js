@@ -6,7 +6,7 @@
 // //Load words db.
 // var w = require('../words-db/testing.js');
 
-function generateSentence() {
+var generateSentence = function() {
   var mySentence = getRandom(sentenceType).split(" ");
   // Replace nouns first. To maintain English's "article/possessive- (adjective)- noun" syntax, you need keep the "adjective" strings intact through the initial loop.
   for (var i = 0; i < mySentence.length; i++) {
@@ -41,7 +41,22 @@ function generateSentence() {
       mySentence[i] = getRandom(verb)[conjugation];
     }
   };
-  mySentence = mySentence.join(" ");
-  mySentence = mySentence.charAt(0).toUpperCase() + mySentence.slice(1) + ".";
+
+  // mySentence = mySentence.join(" ");
+  // mySentence = mySentence.charAt(0).toUpperCase() + mySentence.slice(1) + ".";
+  mySentence = formatSentence(mySentence);
   return mySentence;
+};
+
+var formatSentence = function(sentence) {
+  sentence = sentence.join(" ");
+
+  if (/what|which|when|where|how|who/g.test(sentence)) {
+    var punctuation = "?";
+  } else {
+    var punctuation = ".";
+  };
+
+
+  return sentence.charAt(0).toUpperCase() + sentence.slice(1) + punctuation;
 }

@@ -8,6 +8,8 @@ var articlesEtc = {
     "its",
     "the least",
     "one",
+    "our",
+    "your",
     "their",
     "which"
   ],
@@ -22,7 +24,8 @@ var articlesEtc = {
     "more",
     "most",
     "other",
-    "own",
+    "our",
+    "your",
     "some",
     "such",
     "their",

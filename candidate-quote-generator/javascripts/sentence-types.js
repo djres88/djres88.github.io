@@ -23,7 +23,8 @@ var sentenceType = [
   "According to noun , noun-subject adverb verb noun",
   "adverb , noun-subject verb noun",
   "noun , noun , and noun are adjective",
-  "Our noun-subject is not adjective",
+  "noun-subject must not be adjective",
+  "noun-subject cannot remain adjective",
   "noun and noun are adjective"
 ];
 

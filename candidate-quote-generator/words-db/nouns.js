@@ -151,7 +151,7 @@ var noun = [
   },
   {
   word: "evening",
-  needsArticle: "no",
+  needsArticle: "yes",
   person: "third"
   },
   {
@@ -296,7 +296,7 @@ var noun = [
   },
   {
   word: "morning",
-  needsArticle: "no",
+  needsArticle: "yes",
   person: "third"
   },
   {

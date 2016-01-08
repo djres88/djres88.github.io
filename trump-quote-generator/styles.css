@@ -16,8 +16,8 @@ body {
 }
 
 .title-headers {
-  color: black;
-  -webkit-text-stroke: 1px yellow;
+  color: white;
+  -webkit-text-stroke: 1px blue;
 }
 
 h1 {
@@ -45,6 +45,7 @@ button:hover {
 .quoteBox {
   background-color: black;
   min-height: 300px;
+  max-height: 300px;
   max-width: 550px;
   background: rgba(0,0,0,0.78);
   text-align: center;

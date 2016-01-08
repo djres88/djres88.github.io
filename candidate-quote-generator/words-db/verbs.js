@@ -287,13 +287,6 @@ var verb = [
   thirdPlural: "are ripping"
   },
   {
-  first: "say",
-  second: "say",
-  third: "says",
-  firstPlural: "say",
-  thirdPlural: "say"
-  },
-  {
   first: "schlonged",
   second: "schlonged",
   third: "schlonged",

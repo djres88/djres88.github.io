@@ -280,6 +280,13 @@ var verb = [
   thirdPlural: "refuse"
   },
   {
+  first: "am ripping",
+  second: "are ripping",
+  third: "is ripping",
+  firstPlural: "are ripping",
+  thirdPlural: "are ripping"
+  },
+  {
   first: "say",
   second: "say",
   third: "says",

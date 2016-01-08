@@ -5,13 +5,18 @@ var noun = [
   person: "third"
   },
   {
+  word: "you",
+  needsArticle: "no",
+  person: "second"
+  },
+  {
   word: "America",
   needsArticle: "no",
   person: "third"
   },
   {
-  word: "our country",
-  needsArticle: "no",
+  word: "country",
+  needsArticle: "yes",
   person: "third"
   },
   {
@@ -280,9 +285,9 @@ var noun = [
   person: "third"
   },
   {
-  word: "months",
+  word: "no",
   needsArticle: "no",
-  person: "thirdPlural"
+  person: "third"
   },
   {
   word: "morning",

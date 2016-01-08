@@ -4,6 +4,7 @@ var adverb = [
   "always",
   "badly",
   "forever",
+  "forward",
   "finally",
   "hopefully",
   "never",

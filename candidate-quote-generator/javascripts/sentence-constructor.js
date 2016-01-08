@@ -1,11 +1,3 @@
-// //For Node
-// //Load random selector function
-// var r = require('./randomize.js');
-// //Load sentence types.
-// var s = require('./sentence-types.js');
-// //Load words db.
-// var w = require('../words-db/testing.js');
-
 var generateSentence = function() {
   var mySentence = getRandom(sentenceType).split(" ");
   // Replace nouns first. To maintain English's "article/possessive- (adjective)- noun" syntax, you need keep the "adjective" strings intact through the initial loop.
@@ -57,7 +49,6 @@ var formatSentence = function(sentence) {
   } else {
     var punctuation = ".";
   };
-
 
   return sentence.charAt(0).toUpperCase() + sentence.slice(1) + punctuation;
 }

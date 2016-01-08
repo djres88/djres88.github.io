@@ -5,6 +5,21 @@ var noun = [
   person: "third"
   },
   {
+  word: "White House",
+  needsArticle: "yes",
+  person: "third"
+  },
+  {
+  word: "Obamas",
+  needsArticle: "the",
+  person: "thirdPlural"
+  },
+  {
+  word: "election",
+  needsArticle: "the",
+  person: "third"
+  },
+  {
   word: "you",
   needsArticle: "no",
   person: "second"
@@ -435,7 +450,7 @@ var noun = [
   person: "third"
   },
   {
-  word: "State",
+  word: "state",
   needsArticle: "yes",
   person: "third"
   },

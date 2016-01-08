@@ -33,7 +33,6 @@ var adjective = [
   "massive",
   "merry",
   "new",
-  "next",
   "zero",
   "only",
   "public",

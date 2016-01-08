@@ -10,6 +10,7 @@ var sentenceType = [
   "I believe noun-subject verb noun",
   "noun-subject adverb verb noun",
   "noun-subject verb noun as well as noun",
+  "noun-subject verb noun, and verb noun",
   "adjective noun-subject verb noun",
   "Hey, listen, noun-subject verb noun",
   "That is adjective",

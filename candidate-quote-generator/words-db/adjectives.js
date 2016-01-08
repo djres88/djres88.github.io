@@ -44,7 +44,6 @@ var adjective = [
   "respected",
   "right",
   "safe",
-  "same",
   "silent",
   "smart",
   "special",

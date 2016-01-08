@@ -285,11 +285,6 @@ var noun = [
   person: "third"
   },
   {
-  word: "no",
-  needsArticle: "no",
-  person: "third"
-  },
-  {
   word: "morning",
   needsArticle: "yes",
   person: "third"

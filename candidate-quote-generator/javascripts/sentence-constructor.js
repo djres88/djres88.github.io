@@ -1,3 +1,11 @@
+//startsWith not avail. in Safari
+if (!String.prototype.startsWith) {
+  String.prototype.startsWith = function(searchString, position) {
+    position = position || 0;
+    return this.indexOf(searchString, position) === position;
+  };
+}
+
 var generateSentence = function() {
   var mySentence = getRandom(sentenceType).split(" ");
   // Replace nouns first. To maintain English's "article/possessive- (adjective)- noun" syntax, you need keep the "adjective" strings intact through the initial loop.

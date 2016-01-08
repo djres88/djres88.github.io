@@ -1,0 +1,81 @@
+body {
+  color: white;
+  text-align: center;
+}
+.mainSection {
+  background: url(https://usatelections.files.wordpress.com/2015/07/21-2016ers1.jpg?w=1000&h=564);
+  background-size: 80%;
+  min-height: 50em;
+
+}
+
+.top-header {
+  background: url(http://www.binodlaw.com/web/wp-content/uploads/2015/10/american-flag-header-tall.jpg);
+  background-size: cover;
+  min-height: 10em;
+}
+
+.title-headers {
+  color: black;
+  -webkit-text-stroke: 1px yellow;
+}
+
+h1 {
+  font-size: 80px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+button {
+  font-size: 20px;
+  color: white;
+  background-color: gray;
+  margin-top: 45px;
+  height: 55px;
+}
+
+button:hover {
+  background-color:darkblue;
+  color:red;
+  border-color:red;
+}
+
+.quoteBox {
+  background-color: black;
+  min-height: 300px;
+  max-width: 550px;
+  background: rgba(0,0,0,0.78);
+  text-align: center;
+  margin: auto;
+  margin-top: 30px;
+  padding: 15px;
+}
+
+.currentQuote {
+  padding: 15px;
+  display: none;
+  font-size: 35px;
+  text-align: left;
+}
+
+#speaker {
+ font-weight: bold;
+}
+
+.learn-more-links {
+  background-color: gray;
+  margin-top: -50px;
+}
+
+.learn-more-links ul {
+  list-style-type: none;
+  display: inline;
+  text-align: center;
+}
+
+a {
+  color: lightgray;
+  font-weight: bold;
+}

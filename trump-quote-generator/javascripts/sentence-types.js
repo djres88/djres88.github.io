@@ -6,7 +6,9 @@ var sentenceType = [
   "noun-subject adverb verb noun as well as noun",
   "I say noun-subject verb noun",
   "noun-subject verb adjective noun",
-  "noun-subject , then noun , verb noun",
+  "noun-subject verb then verb",
+  "let's make noun adjective again",
+  "noun-subject , adjective noun , verb noun",
   "I believe noun-subject verb noun",
   "noun-subject adverb verb noun",
   "noun-subject verb noun as well as noun",
@@ -18,7 +20,6 @@ var sentenceType = [
   "noun-subject means noun-subject",
   "noun said that noun-subject verb noun",
   "According to noun , noun-subject verb noun",
-  "noun , noun , and noun are adjective",
   "noun-subject must not be adjective",
   "noun-subject cannot remain adjective",
   "noun and noun are adjective"

@@ -2,15 +2,15 @@ body {
   color: white;
   text-align: center;
 }
-.mainSection {
-  background: url(https://usatelections.files.wordpress.com/2015/07/21-2016ers1.jpg?w=1000&h=564);
-  background-size: 80%;
-  min-height: 50em;
 
+.mainSection {
+  background: url("./images/trump-1.jpg") repeat;
+  background-size: 100%;
+  min-height: 50em;
 }
 
 .top-header {
-  background: url(http://www.binodlaw.com/web/wp-content/uploads/2015/10/american-flag-header-tall.jpg);
+  background-color: darkred;
   background-size: cover;
   min-height: 10em;
 }

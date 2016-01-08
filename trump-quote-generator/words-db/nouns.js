@@ -11,12 +11,12 @@ var noun = [
   },
   {
   word: "Obamas",
-  needsArticle: "the",
+  needsArticle: "yes",
   person: "thirdPlural"
   },
   {
   word: "election",
-  needsArticle: "the",
+  needsArticle: "yes",
   person: "third"
   },
   {

@@ -6,7 +6,7 @@ var sentenceType = [
   "noun-subject adverb verb noun as well as noun",
   "I say noun-subject verb noun",
   "noun-subject verb adjective noun",
-  "noun-subject verb, only to verb noun",
+  "noun-subject verb , only to verb noun",
   "Which noun-subject verb",
   "let's make noun adjective again",
   "noun-subject , adjective noun , verb noun",

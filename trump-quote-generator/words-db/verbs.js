@@ -231,6 +231,20 @@ var verb = [
   thirdPlural: "lead"
   },
   {
+  first: "lose",
+  second: "lose",
+  third: "loses",
+  firstPlural: "lose",
+  thirdPlural: "lose"
+  },
+  {
+  first: "am losing",
+  second: "are losing",
+  third: "is losing",
+  firstPlural: "are losing",
+  thirdPlural: "are losing"
+  },
+  {
   first: "make",
   second: "make",
   third: "makes",
@@ -362,6 +376,13 @@ var verb = [
   third: "is watching",
   firstPlural: "are watching",
   thirdPlural: "are watching"
+  },
+  {
+  first: "win",
+  second: "win",
+  third: "wins",
+  firstPlural: "win",
+  thirdPlural: "win"
   }
 ]
 

@@ -25,6 +25,26 @@ var noun = [
   person: "second"
   },
   {
+  word: "losers",
+  needsArticle: "no",
+  person: "thirdPlural"
+  },
+  {
+  word: "loser",
+  needsArticle: "yes",
+  person: "third"
+  },
+  {
+  word: "winning",
+  needsArticle: "no",
+  person: "third"
+  },
+  {
+  word: "losing",
+  needsArticle: "no",
+  person: "third"
+  },
+  {
   word: "America",
   needsArticle: "no",
   person: "third"

@@ -4,7 +4,6 @@ var articlesEtc = {
     "every",
     "his",
     "her",
-    "neither",
     "one",
     "our",
     "your",

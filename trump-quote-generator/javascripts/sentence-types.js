@@ -10,7 +10,7 @@ var sentenceType = [
   "we need adjective noun and not adjective noun",
   "with noun in noun , noun-subject verb noun",
   "if noun-subject verb noun , there will be noun",
-  "which noun-subject verb",
+  "which noun-subject verb noun",
   "adjective noun-subject verb noun and noun",
   "noun-subject verb noun or noun, but not adjective noun",
   "let's make noun adjective again",

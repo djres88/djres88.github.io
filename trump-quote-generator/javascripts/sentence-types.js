@@ -8,7 +8,6 @@ var sentenceType = [
   "with noun in noun , noun-subject verb noun",
   "if noun-subject verb noun , there will be noun",
   "who says noun-subject verb noun",
-  "when will noun-subject verb noun",
   "adjective noun-subject verb noun and noun",
   "noun-subject verb noun and noun , but not adjective noun",
   "noun-subject verb noun , but not adjective noun",

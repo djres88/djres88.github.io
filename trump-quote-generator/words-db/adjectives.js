@@ -26,7 +26,6 @@ var adjective = [
   "last",
   "late",
   "leading",
-  "like",
   "long",
   "lost",
   "major",

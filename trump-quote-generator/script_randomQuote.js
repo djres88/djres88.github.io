@@ -1,5 +1,12 @@
 $(document).ready(function() {
-  $("#great").text(getRandom(adjective).toUpperCase());
+
+  var headerLoop = function(){
+    $("#great").fadeOut(5000, function() {
+      $("#great").text(getRandom(adjective).toUpperCase()).fadeIn(5000, headerLoop);
+    });
+  }
+  headerLoop();
+
   $("#newQuote").click(function() {
      var myQuote = generateSentence();
      var mySpeaker = "Donald Trump";

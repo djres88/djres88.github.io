@@ -2,8 +2,6 @@ var articlesEtc = {
   third: [
     "another",
     "every",
-    "his",
-    "her",
     "one",
     "our",
     "your",
@@ -13,14 +11,15 @@ var articlesEtc = {
     "the",
     "the next",
     "the same",
-    "their"
+    "Obama's",
+    "Hillary's",
+    "Rosie O'Donnell's",
+    "the Democrats'"
   ],
   thirdPlural: [
     "any",
     "both",
     "enough",
-    "his",
-    "her",
     "more",
     "the most",
     "other",
@@ -34,8 +33,11 @@ var articlesEtc = {
     "the next",
     "some",
     "such",
-    "their",
     "those",
-    "two"
+    "two",
+    "Obama's",
+    "Hillary's",
+    "Rosie O'Donnell's",
+    "the Democrats'"
   ]
 };

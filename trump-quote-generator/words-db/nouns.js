@@ -520,11 +520,6 @@ var noun = [
   person: "third"
   },
   {
-  word: "top",
-  needsArticle: "yes",
-  person: "third"
-  },
-  {
   word: "Trump",
   needsArticle: "no",
   person: "third"

@@ -26,6 +26,11 @@ var generateSentence = function() {
         } else {
           mySentence.splice(i, 0, getRandom(articlesEtc[person]));
         }
+        //if noun has adjective, add the article regardless
+      } else {
+        if (mySentence[i-1] === "adjective") {
+          mySentence.splice(i-1, 0, getRandom(articlesEtc[person]));
+        }
       }
     }
   }

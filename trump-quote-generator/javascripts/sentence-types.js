@@ -5,7 +5,6 @@ var sentenceType = [
   "noun-subject verb adjective noun",
   "noun-subject verb noun , but not adjective noun",
   "noun-subject verb noun and noun",
-  "noun-subject verb noun , but not for adjective noun",
   "noun-subject adverb verb noun",
   "we need noun",
   "noun-subject verb noun as well as noun",

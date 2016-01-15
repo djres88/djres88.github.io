@@ -1,16 +1,8 @@
-//startsWith not avail. in Safari
-if (!String.prototype.startsWith) {
-  String.prototype.startsWith = function(searchString, position) {
-    position = position || 0;
-    return this.indexOf(searchString, position) === position;
-  };
-}
-
 var generateSentence = function() {
   var mySentence = getRandom(sentenceType).split(" ");
   // Replace nouns first. To maintain English's "article/possessive- (adjective)- noun" syntax, you need keep the "adjective" strings intact through the initial loop.
   for (var i = 0; i < mySentence.length; i++) {
-    if (mySentence[i].startsWith("noun")) {
+    if (mySentence[i].indexOf("noun") !== -1) {
       var myNoun = getRandom(noun);
       var person = myNoun["person"];
       //If the current noun is the subject, grab the subject's person and store for conjugating the verb:
@@ -42,8 +34,6 @@ var generateSentence = function() {
     }
   };
 
-  // mySentence = mySentence.join(" ");
-  // mySentence = mySentence.charAt(0).toUpperCase() + mySentence.slice(1) + ".";
   mySentence = formatSentence(mySentence);
   return mySentence;
 };

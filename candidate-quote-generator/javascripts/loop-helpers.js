@@ -38,16 +38,16 @@ function getRandom(array) {
 }
 
 
-function replaceWords(array) {
+function replaceWords(string) {
   return function(wordType) {
-    for(var i=0; i<array.length; i++) {
+    var arrayOfWords = string.split(' ');
+    for(var i=0; i<arrayOfWords.length; i++) {
       if(wordType === array[i]) {
         getRandom(wordType);
       }
     }
   }
 }
-
 
 function replace(string) {
   return function(array) {
@@ -66,6 +66,5 @@ function replaceAll(string, find, replace) {
   var findValue = new RegExp(find, "gi");
   return string.replace(findValue, replace);
 }
-
 
 getRandom(string);

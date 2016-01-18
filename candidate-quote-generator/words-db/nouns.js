@@ -1,12 +1,12 @@
 var noun = [
   {
   word: "2015",
-  needsArticle: "no",
+  needsArticle: false,
   person: "third"
   },
   {
   word: "White House",
-  needsArticle: "yes",
+  needsArticle: true,
   person: "third"
   },
   {
@@ -21,547 +21,547 @@ var noun = [
   },
   {
   word: "you",
-  needsArticle: "no",
+  needsArticle: false,
   person: "second"
   },
   {
   word: "America",
-  needsArticle: "no",
+  needsArticle: false,
   person: "third"
   },
   {
   word: "country",
-  needsArticle: "yes",
+  needsArticle: true,
   person: "third"
   },
   {
   word: "Reagan",
-  needsArticle: "no",
+  needsArticle: false,
   person: "third"
   },
   {
   word: "25k",
-  needsArticle: "no",
+  needsArticle: false,
   person: "third"
   },
   {
   word: "act",
-  needsArticle: "yes",
+  needsArticle: true,
   person: "third"
   },
   {
   word: "Bill Clinton",
-  needsArticle: "no",
+  needsArticle: false,
   person: "third"
   },
   {
   word: "book",
-  needsArticle: "yes",
+  needsArticle: true,
   person: "third"
   },
   {
   word: "books",
-  needsArticle: "no",
+  needsArticle: false,
   person: "thirdPlural"
   },
   {
   word: "Bush",
-  needsArticle: "no",
+  needsArticle: false,
   person: "third"
   },
   {
   word: "campaign",
-  needsArticle: "yes",
+  needsArticle: true,
   person: "third"
   },
   {
   word: "candidates",
-  needsArticle: "yes",
+  needsArticle: true,
   person: "thirdPlural"
   },
   {
   word: "card",
-  needsArticle: "yes",
+  needsArticle: true,
   person: "third"
   },
   {
   word: "Christmas",
-  needsArticle: "no",
+  needsArticle: false,
   person: "third"
   },
   {
   word: "Hillary",
-  needsArticle: "no",
+  needsArticle: false,
   person: "third"
   },
   {
   word: "CNN",
-  needsArticle: "no",
+  needsArticle: false,
   person: "third"
   },
   {
   word: "council",
-  needsArticle: "yes",
+  needsArticle: true,
   person: "third"
   },
   {
   word: "crowd",
-  needsArticle: "yes",
+  needsArticle: true,
   person: "third"
   },
   {
   word: "crowds",
-  needsArticle: "no",
+  needsArticle: false,
   person: "thirdPlural"
   },
   {
   word: "Ted Cruz",
-  needsArticle: "no",
+  needsArticle: false,
   person: "third"
   },
   {
   word: "danger",
-  needsArticle: "yes",
+  needsArticle: true,
   person: "third"
   },
   {
   word: "day",
-  needsArticle: "yes",
+  needsArticle: true,
   person: "third"
   },
   {
   word: "debate",
-  needsArticle: "yes",
+  needsArticle: true,
   person: "third"
   },
   {
   word: "Des Moines",
-  needsArticle: "no",
+  needsArticle: false,
   person: "third"
   },
   {
   word: "Donald",
-  needsArticle: "no",
+  needsArticle: false,
   person: "third"
   },
   {
   word: "end",
-  needsArticle: "yes",
+  needsArticle: true,
   person: "third"
   },
   {
   word: "energy",
-  needsArticle: "no",
+  needsArticle: false,
   person: "third"
   },
   {
   word: "New England",
-  needsArticle: "no",
+  needsArticle: false,
   person: "third"
   },
   {
   word: "evening",
-  needsArticle: "yes",
+  needsArticle: true,
   person: "third"
   },
   {
   word: "event",
-  needsArticle: "yes",
+  needsArticle: true,
   person: "third"
   },
   {
   word: "face",
-  needsArticle: "yes",
+  needsArticle: true,
   person: "third"
   },
   {
   word: "family",
-  needsArticle: "no",
+  needsArticle: false,
   person: "third"
   },
   {
   word: "gifts",
-  needsArticle: "no",
+  needsArticle: false,
   person: "thirdPlural"
   },
   {
   word: "GOP",
-  needsArticle: "yes",
+  needsArticle: true,
   person: "third"
   },
   {
   word: "head",
-  needsArticle: "yes",
+  needsArticle: true,
   person: "third"
   },
   {
   word: "holiday",
-  needsArticle: "yes",
+  needsArticle: true,
   person: "third"
   },
   {
   word: "honor",
-  needsArticle: "no",
+  needsArticle: false,
   person: "third"
   },
   {
   word: "hope",
-  needsArticle: "no",
+  needsArticle: false,
   person: "third"
   },
   {
   word: "husband",
-  needsArticle: "yes",
+  needsArticle: true,
   person: "third"
   },
   {
   word: "immigrants",
-  needsArticle: "no",
+  needsArticle: false,
   person: "thirdPlural"
   },
   {
   word: "incompetence",
-  needsArticle: "no",
+  needsArticle: false,
   person: "third"
   },
   {
   word: "Iowa",
-  needsArticle: "no",
+  needsArticle: false,
   person: "third"
   },
   {
   word: "ISIS",
-  needsArticle: "no",
+  needsArticle: false,
   person: "third"
   },
   {
   word: "Israel",
-  needsArticle: "no",
+  needsArticle: false,
   person: "third"
   },
   {
   word: "Jeb Bush",
-  needsArticle: "no",
+  needsArticle: false,
   person: "third"
   },
   {
   word: "jobs",
-  needsArticle: "no",
+  needsArticle: false,
   person: "thirdPlural"
   },
   {
   word: "Las Vegas",
-  needsArticle: "no",
+  needsArticle: false,
   person: "third"
   },
   {
   word: "leader",
-  needsArticle: "yes",
+  needsArticle: true,
   person: "third"
   },
   {
   word: "leaders",
-  needsArticle: "no",
+  needsArticle: false,
   person: "thirdPlural"
   },
   {
   word: "lobbyists",
-  needsArticle: "no",
+  needsArticle: false,
   person: "thirdPlural"
   },
   {
   word: "love",
-  needsArticle: "no",
+  needsArticle: false,
   person: "third"
   },
   {
   word: "media",
-  needsArticle: "yes",
+  needsArticle: true,
   person: "third"
   },
   {
   word: "Mexico",
-  needsArticle: "no",
+  needsArticle: false,
   person: "third"
   },
   {
   word: "Michigan",
-  needsArticle: "no",
+  needsArticle: false,
   person: "third"
   },
   {
   word: "Mississippi",
-  needsArticle: "no",
+  needsArticle: false,
   person: "third"
   },
   {
   word: "money",
-  needsArticle: "no",
+  needsArticle: false,
   person: "third"
   },
   {
   word: "morning",
-  needsArticle: "yes",
+  needsArticle: true,
   person: "third"
   },
   {
   word: "Muslim",
-  needsArticle: "yes",
+  needsArticle: true,
   person: "third"
   },
   {
   word: "Muslims",
-  needsArticle: "no",
+  needsArticle: false,
   person: "thirdPlural"
   },
   {
   word: "North Carolina",
-  needsArticle: "no",
+  needsArticle: false,
   person: "third"
   },
   {
   word: "number",
-  needsArticle: "yes",
+  needsArticle: true,
   person: "third"
   },
   {
   word: "Obama",
-  needsArticle: "no",
+  needsArticle: false,
   person: "third"
   },
   {
   word: "oil",
-  needsArticle: "no",
+  needsArticle: false,
   person: "third"
   },
   {
   word: "order",
-  needsArticle: "no",
+  needsArticle: false,
   person: "third"
   },
   {
   word: "party",
-  needsArticle: "yes",
+  needsArticle: true,
   person: "third"
   },
   {
   word: "penchant",
-  needsArticle: "yes",
+  needsArticle: true,
   person: "third"
   },
   {
   word: "person",
-  needsArticle: "yes",
+  needsArticle: true,
   person: "third"
   },
   {
   word: "place",
-  needsArticle: "yes",
+  needsArticle: true,
   person: "third"
   },
   {
   word: "points",
-  needsArticle: "no",
+  needsArticle: false,
   person: "thirdPlural"
   },
   {
   word: "police",
-  needsArticle: "yes",
+  needsArticle: true,
   person: "thirdPlural"
   },
   {
   word: "policy",
-  needsArticle: "no",
+  needsArticle: false,
   person: "third"
   },
   {
   word: "polls",
-  needsArticle: "yes",
+  needsArticle: true,
   person: "thirdPlural"
   },
   {
   word: "problems",
-  needsArticle: "yes",
+  needsArticle: true,
   person: "thirdPlural"
   },
   {
   word: "puppets",
-  needsArticle: "yes",
+  needsArticle: true,
   person: "thirdPlural"
   },
   {
   word: "rapists and murderers",
-  needsArticle: "no",
+  needsArticle: false,
   person: "thirdPlural"
   },
   {
   word: "record",
-  needsArticle: "yes",
+  needsArticle: true,
   person: "third"
   },
   {
   word: "respect",
-  needsArticle: "no",
+  needsArticle: false,
   person: "third"
   },
   {
   word: "results",
-  needsArticle: "no",
+  needsArticle: false,
   person: "thirdPlural"
   },
   {
   word: "Reuters",
-  needsArticle: "no",
+  needsArticle: false,
   person: "third"
   },
   {
   word: "RNC",
-  needsArticle: "yes",
+  needsArticle: true,
   person: "third"
   },
   {
   word: "Bernie Sanders",
-  needsArticle: "no",
+  needsArticle: false,
   person: "third"
   },
   {
   word: "saying",
-  needsArticle: "yes",
+  needsArticle: true,
   person: "third"
   },
   {
   word: "South Carolina",
-  needsArticle: "no",
+  needsArticle: false,
   person: "third"
   },
   {
   word: "speech",
-  needsArticle: "yes",
+  needsArticle: true,
   person: "third"
   },
   {
   word: "stamina",
-  needsArticle: "yes",
+  needsArticle: true,
   person: "third"
   },
   {
   word: "state",
-  needsArticle: "yes",
+  needsArticle: true,
   person: "third"
   },
   {
   word: "statement",
-  needsArticle: "yes",
+  needsArticle: true,
   person: "third"
   },
   {
   word: "strength",
-  needsArticle: "no",
+  needsArticle: false,
   person: "third"
   },
   {
   word: "terror",
-  needsArticle: "no",
+  needsArticle: false,
   person: "third"
   },
   {
   word: "terrorism",
-  needsArticle: "no",
+  needsArticle: false,
   person: "third"
   },
   {
   word: "thing",
-  needsArticle: "yes",
+  needsArticle: true,
   person: "third"
   },
   {
   word: "threat",
-  needsArticle: "yes",
+  needsArticle: true,
   person: "third"
   },
   {
   word: "time",
-  needsArticle: "no",
+  needsArticle: false,
   person: "third"
   },
   {
   word: "today",
-  needsArticle: "no",
+  needsArticle: false,
   person: "third"
   },
   {
   word: "tomorrow",
-  needsArticle: "no",
+  needsArticle: false,
   person: "third"
   },
   {
   word: "tonight",
-  needsArticle: "no",
+  needsArticle: false,
   person: "third"
   },
   {
   word: "top",
-  needsArticle: "yes",
+  needsArticle: true,
   person: "third"
   },
   {
   word: "Trump",
-  needsArticle: "no",
+  needsArticle: false,
   person: "third"
   },
   {
   word: "union",
-  needsArticle: "yes",
+  needsArticle: true,
   person: "third"
   },
   {
   word: "views",
-  needsArticle: "yes",
+  needsArticle: true,
   person: "thirdPlural"
   },
   {
   word: "Virginia",
-  needsArticle: "no",
+  needsArticle: false,
   person: "third"
   },
   {
   word: "voters",
-  needsArticle: "no",
+  needsArticle: false,
   person: "thirdPlural"
   },
   {
   word: "wall",
-  needsArticle: "yes",
+  needsArticle: true,
   person: "third"
   },
   {
   word: "walls",
-  needsArticle: "no",
+  needsArticle: false,
   person: "thirdPlural"
   },
   {
   word: "way",
-  needsArticle: "yes",
+  needsArticle: true,
   person: "third"
   },
   {
   word: "weeks",
-  needsArticle: "no",
+  needsArticle: false,
   person: "thirdPlural"
   },
   {
   word: "women",
-  needsArticle: "no",
+  needsArticle: false,
   person: "thirdPlural"
   },
   {
   word: "year",
-  needsArticle: "yes",
+  needsArticle: true,
   person: "third"
   },
   {
   word: "years",
-  needsArticle: "no",
+  needsArticle: false,
   person: "thirdPlural"
   }
 ];

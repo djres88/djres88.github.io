@@ -15,6 +15,7 @@ var getTweets = function(handle) {
       candidateWords.map(function(word) {
         word = word.toLowerCase();
         return (!/[~`!#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?]/g.test(word));
+        //ADD _uniq!
       })
     }
   });
@@ -30,5 +31,3 @@ getTweets("realDonaldTrump");
 getTweets("HillaryClinton");
 getTweets("BernieSanders");
 getTweets("TedCruz");
-
-//ADD: Unless you're gonna change the randomizer to frequency-based, use filter/map to select only unique words. Need something similar to the _uniq from underscore.

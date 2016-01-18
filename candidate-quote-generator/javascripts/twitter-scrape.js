@@ -8,16 +8,14 @@ var getTweets = function(handle) {
   });
 
   //Push candidate's words to an array:
-  var candidateWords = [];
   streamOfTweets.on('readable', function() {
     var tweet = streamOfTweets.read().text.replace("."," ");
     if (tweet.indexOf("@") === -1) {
-      var words = tweet.split(" ");
-      for (var j = 0; j < words.length; j++) {
-        if (!/[~`!#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?]/g.test(words[j])) {
-          candidateWords.push(words[j].toLowerCase());
-        }
-      }
+      var allWords = tweet.split(" ");
+      var candidateWords = allWords.filter(function(word) {
+        word = word.toLowerCase();
+        return (!/[~`!#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?]/g.test(word));
+      })
     }
   });
 

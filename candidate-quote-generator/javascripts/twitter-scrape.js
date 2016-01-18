@@ -11,8 +11,8 @@ var getTweets = function(handle) {
   streamOfTweets.on('readable', function() {
     var tweet = streamOfTweets.read().text.replace("."," ");
     if (tweet.indexOf("@") === -1) {
-      var allWords = tweet.split(" ");
-      var candidateWords = allWords.filter(function(word) {
+      var candidateWords = tweet.split(" ");
+      candidateWords.map(function(word) {
         word = word.toLowerCase();
         return (!/[~`!#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?]/g.test(word));
       })

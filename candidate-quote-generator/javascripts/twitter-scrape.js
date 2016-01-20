@@ -1,3 +1,14 @@
+//Adding feature: get unique words only (less sorting later).
+var unique = function(array) {
+  var result = [];
+  array.forEach(function(item) {
+    if(result.indexOf(item) === -1) {
+      result.push(item);
+    }
+  });
+  return result;
+}
+
 var TwitterPosts, streamOfTweets;
 TwitterPosts = require('twitter-screen-scrape');
 
@@ -7,24 +18,29 @@ var getTweets = function(handle) {
     retweets: false
   });
 
-  //Push candidate's words to an array:
+  var tweets = [];
+  var words;
+
   streamOfTweets.on('readable', function() {
-    var tweet = streamOfTweets.read().text.replace("."," ");
-    if (tweet.indexOf("@") === -1) {
-      var candidateWords = tweet.split(" ");
-      candidateWords.map(function(word) {
-        word = word.toLowerCase();
-        return (!/[~`!#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?]/g.test(word));
-        //ADD _uniq!
-      })
-    }
+    //As the scraper pulls tweets, push each tweet to an array.
+    tweets.push(streamOfTweets.read().text);
+
+    setTimeout(function() { // give scraper time to pull tweets
+      var removeQuotes = tweets.filter(function(tweet) { //Some tweets are quotes from other people. Remove these -- only want the candidate's words.
+        return tweet[0] !== "\"";
+      });
+      var stringOfTweets = removeQuotes.join(" ").replace(/[.&?,\-\—!\(\)]/g, "").replace(/\n/g, " ").toLowerCase(); //Join all words into a single string and format.
+      var arrayOfWords = stringOfTweets.split(" ").sort(); //Split the words back into an array so that each word is its own element, then sort and filter the array.
+      var allWords = arrayOfWords.filter(function(word) {
+        return !word.match(/(http|pictwitter|#|@)/); // Filter words that are... actual words (i.e. not websites, hashtags, etc.)
+      });
+      words = unique(allWords); // Get only unique words (no need to store duplicates in the array)
+    }, 7000);
   });
 
-  //Print words:
   setTimeout(function() {
-    candidateWords.split
-    console.log("HERE ARE THE WORDS FOR @" + handle + ": " + candidateWords.sort());
-  }, 10000);
+    console.log("HERE ARE THE WORDS FOR @", handle, ": ", words);
+  }, 7500);
 }
 
 getTweets("realDonaldTrump");

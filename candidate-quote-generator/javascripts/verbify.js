@@ -2,26 +2,26 @@
 var verbify = function(array) {
   var arrayOfVerbObjects = [];
   array.forEach(function(verb) {
-    var verbObject = {}, pConjugation;
+    var verbObject = {}, root;
 
     //Grab the last letter of the verb for conjugation/spelling. If the last letter is a vowel, it is (usually) removed when conjugating past/progressive/perfect tenses (e.g. believe --> believing, believed).
     var lastLetter = verb[verb.length-1];
     if (lastLetter.match(/[aeiou]/)) {
-      pConjugation = verb.split("");
-      pConjugation.pop([pConjugation.length-1]);
-      pConjugation = pConjugation.join("");
+      root = verb.split("");
+      root.pop([root.length-1]);
+      root = root.join("");
     } else {
-      pConjugation = verb;
+      root = verb;
     };
 
     //Create object
     verbObject.present = {first: verb, second: verb, third: verb + "s", plural: verb};
-    verbObject.past = {first: pConjugation + "ed", second: pConjugation + "ed", third: pConjugation + "ed", plural: pConjugation + "ed"};
+    verbObject.past = {first: root + "ed", second: root + "ed", third: root + "ed", plural: root + "ed"};
     verbObject.future = {first: "will " + verb, second: "will " + verb, third: "will " + verb, plural: "will " + verb};
-    verbObject.presentProgressive = {first: "am " + pConjugation + "ing", second: "are " + pConjugation + "ing", third: "is " + pConjugation + "ing", plural: "are " + pConjugation + "ing"};
-    verbObject.presentPerfect = {first: "have " + pConjugation + "ed", second: "have " + pConjugation + "ed", third: "has " + pConjugation + "ed", plural: "have " + pConjugation + "ed"};
-    verbObject.pastProgressive = {first: "was " + pConjugation + "ing", second: "were " + pConjugation + "ing", third: "was " + pConjugation + "ing", plural: "were " + pConjugation + "ing"};
-    verbObject.pastPerfect = {first: "had " + pConjugation + "ed", second: "had " + pConjugation + "ed", third: "had " + pConjugation + "ed", plural: "had " + pConjugation + "ed"};
+    verbObject.presentProgressive = {first: "am " + root + "ing", second: "are " + root + "ing", third: "is " + root + "ing", plural: "are " + root + "ing"};
+    verbObject.presentPerfect = {first: "have " + root + "ed", second: "have " + root + "ed", third: "has " + root + "ed", plural: "have " + root + "ed"};
+    verbObject.pastProgressive = {first: "was " + root + "ing", second: "were " + root + "ing", third: "was " + root + "ing", plural: "were " + root + "ing"};
+    verbObject.pastPerfect = {first: "had " + root + "ed", second: "had " + root + "ed", third: "had " + root + "ed", plural: "had " + root + "ed"};
 
     arrayOfVerbObjects.push(verbObject);
   });

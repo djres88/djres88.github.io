@@ -38,16 +38,55 @@ function getRandom(array) {
 }
 
 
-function replaceWords(string) {
-  return function(wordType) {
-    var arrayOfWords = string.split(' ');
-    for(var i=0; i<arrayOfWords.length; i++) {
-      if(wordType === array[i]) {
-        getRandom(wordType);
+
+
+
+function replaceWords(wordType) {
+  return function(sentence) {
+    sentence = sentence.split(' ');
+    sentence.forEach(function(word, index) {
+      if(word === wordType) {
+        var wordOfSameType = window[wordType];
+        sentence[index] = getRandom(wordOfSameType);
       }
-    }
+      return sentence.join(' ');
+    });
   }
 }
+
+function generateSentence(sentenceTypes) {
+  array.forEach(function(type) {
+    var run = replaceWords(type);
+    run();
+  })
+}
+
+sentenceArray.forEach(function(word, index) {
+  if(word === "noun") {
+    sentenceArray[index] = getRandom(noun);
+  }
+});
+
+
+
+var replaceAdjectives = replaceWords("adjective");
+replaceAdjectives("Noun adjective");
+
+function replaceIt(sentence) {
+  sentence = sentence.split(' ');
+  sentence.forEach(function(word, index) {
+    if(word === "pillow") {
+      console.log("soft");
+      sentence[index] = "soft";
+    }
+  });
+  return sentence.join(' ');
+}
+
+
+
+
+
 
 function replace(string) {
   return function(array) {

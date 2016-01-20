@@ -6,7 +6,7 @@ var generateSentence = function() {
       var myNoun = getRandom(noun);
       var person = myNoun["person"];
       //If the current noun is the subject, grab the subject's person and store for conjugating the verb:
-      if (mySentence[i] == "noun-subject") {
+      if (mySentence[i] === "noun-subject") {
         var conjugation = person;
       }
       mySentence[i] = myNoun["word"];

@@ -1,0 +1,1 @@
+var clintonWords = ["go", "believe"];

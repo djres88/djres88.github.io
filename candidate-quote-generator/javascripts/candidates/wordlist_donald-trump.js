@@ -1,1 +1,0 @@
-var trumpWords = ["go", "believe"];

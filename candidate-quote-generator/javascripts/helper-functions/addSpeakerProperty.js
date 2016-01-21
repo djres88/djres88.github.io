@@ -1,10 +1,11 @@
-//A much-needed new feature. Instead of having a noun/verb/adjective/etc object for EACH candidate, I'm adding a "speaker" property to each word using a lookup of all the candidate's words.
-var addSpeaker = function(speakerName, speakerWordsArray) {
-  return function(object) {
-    for (var key in object) {
-      speakerWordsArray.forEach(function(word) {
-        if(object[key].lookupValue === word) {
-          object[key].speaker.push(speakerName);
+//Instead of having a noun/verb/adjective/etc object for EACH candidate, I'm adding a "speaker" property to each word-object. This method makes for an easy cut/paste of words into the "wordlist" files.
+var addSpeaker = function(candidateName, candidateWordlist) {
+  return function(wordsObject) {
+    for (var key in wordsObject) {
+      //The return function checks every word in the object for a matching word in the candidate's db. If it finds one, it adds the candidate's name to the "speaker" property in the word object.
+      speakerWordsArray.map(function(word) { //forEach or map?
+        if(wordsObject[key].lookupValue === word) {
+          wordsObject[key].speaker.push(candidateName);
         };
       });
     };
@@ -12,8 +13,9 @@ var addSpeaker = function(speakerName, speakerWordsArray) {
   };
 };
 
+var partsOfSpeech = [verbs];
+
 var addAllSpeakers = function(myCandidates, myNames, myWords) {
-  var partsOfSpeech = [verbs];
   myCandidates.forEach(function(candidate) {
     var addCurrentSpeaker = addSpeaker(candidate[myNames], candidate[myWords]);
     partsOfSpeech.forEach(function(type) {
@@ -32,5 +34,4 @@ var objectsWithSpeakers = addAllSpeakers(candidates, "speaker", "words");
 // var prepositions = objectsWithSpeakers[4];
 var verbs = objectsWithSpeakers[0];
 
-
-//adjectives, adverbs, articles, nouns, prepositions,
+// adjectives, adverbs, articles, nouns, prepositions,

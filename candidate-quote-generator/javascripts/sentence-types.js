@@ -23,6 +23,3 @@ var sentenceType = [
   "noun-subject cannot remain adjective",
   "noun and noun are adjective"
 ];
-
-// //node
-// exports.sentenceType = sentenceType;

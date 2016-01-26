@@ -1,1 +1,0 @@
-var clintonWords = ["go", "believe"];

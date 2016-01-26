@@ -1046,21 +1046,25 @@ removals = [
   "privateforprofit"
 ];
 
-articles = [
+nounProperties = [
   {
     word: "opinion",
-    articles: ["my", "your", "an"]
+    articles: ["my", "your", "an"],
+    person: "third"
   },
   {
     word: "paper",
     articles: []
+    person: "third"
   },
   {
     word: "advice",
     articles: ["test", "the"]
+    person: "third"
   },
   {
     word: "Americans",
     articles: []
+    person: "plural"
   }
 ];

@@ -1,13 +1,4 @@
 //Adding feature: get unique words only (less sorting later).
-var unique = function(array) {
-  var result = [];
-  array.forEach(function(item) {
-    if(result.indexOf(item) === -1) {
-      result.push(item);
-    }
-  });
-  return result;
-}
 
 var TwitterPosts, streamOfTweets;
 TwitterPosts = require('twitter-screen-scrape');

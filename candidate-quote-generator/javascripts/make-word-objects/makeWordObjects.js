@@ -4,7 +4,8 @@
 var candidates = {
   cruz: cruz,
   clinton: clinton,
-  sanders: sanders
+  sanders: sanders,
+  trump: trump
 }
 
 function replaceWords(candidate, editsList) {
@@ -61,9 +62,10 @@ for (var person in candidates) {
 //Adds articles to each candidate's noun-objects.
 function makeNouns(candidate) {
   return candidate.map(function(candidateWord) {
-    articlesList.forEach(function(articleLookup) {
-      if (candidateWord["word"] === articleLookup["word"]) {
-        candidateWord.articles = articleLookup.articles;
+    nounProperties.forEach(function(noun) {
+      if (candidateWord["word"] === noun["word"]) {
+        candidateWord.articles = nounProperties["articles"];
+        candidateWord.person =  nounProperties["person"];
       }
     });
     return candidateWord;

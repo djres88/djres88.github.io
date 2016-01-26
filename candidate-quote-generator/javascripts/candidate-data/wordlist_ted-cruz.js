@@ -1,1 +1,0 @@
-var cruzWords = ["go", "believe"];

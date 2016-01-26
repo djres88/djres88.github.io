@@ -1,12 +1,66 @@
-//Here we make the word-objects for each candidate. Specifically, we need to add information (properties) to the noun and verb objects.
+//Here I take the arrays of objects from unformatted-candidate-wordlist.js and generate formatted word-objects for each candidate. Specifically, we need to add information (properties) to the noun and verb objects.
 
 //List of candidates. Makes it easier to add/remove candidates as the race develops.
-var candidates = [cruz, clinton, sanders, trump];
+var candidates = {
+  cruz: cruz,
+  clinton: clinton,
+  sanders: sanders
+}
+
+function replaceWords(candidate, editsList) {
+  return candidate.map(function(candidateWord) {
+    editsList.forEach(function(edit) {
+      if (candidateWord["word"] === edit[0]) {
+        candidateWord["word"] = edit[1];
+      }
+    });
+    return candidateWord;
+  });
+};
+
+function removeWords(candidate, removeList) {
+  return candidate.filter(function(candidateWord) {
+     removeList.forEach(function(wordToRemove) {
+       if (candidateWord["word"] === wordToRemove) {
+         candidateWord["word"] = "remove";
+       }
+     });
+     return candidateWord["word"] !== "remove";
+  });
+  return candidate;
+};
+
+function addWordType(candidate, dictionary) {
+  return candidate.map(function(candidateWord) {
+    candidateWord.speech = "CHECK";
+    dictionary.forEach(function(entry) {
+      if (candidateWord["word"] === entry["word"]) {
+        candidateWord.speech = entry["partofspeech"];
+      }
+    });
+    return candidateWord;
+  });
+}
+
+//Create a new variable w/ each of candidate word-objects
+for (var person in candidates) {
+  candidates[person] = removeWords(candidates[person], removals);
+  candidates[person] = replaceWords(candidates[person], corrections);
+  candidates[person] = addWordType(candidates[person], miniDictionary);
+};
+
+//****CHECK FOR WORDS THAT DO NOT HAVE A TYPE (part of speech). Log them to the console and, for each word, decide whether to (1) add the word to the dictionary with its type OR (2) add the word to the "remove words" array.
+for (var person in candidates) {
+  var needsType = candidates[person].filter(function(word) {
+    return word.speech === "CHECK";
+  });
+  console.log(needsType);
+}
+//*****AFTER YOU DECIDE ON EACH, RE-RUN THROUGH LINE 50. CONTINUE UNTIL YOU'RE LOGGING NOTHING.***
 
 //Adds articles to each candidate's noun-objects.
 function makeNouns(candidate) {
   return candidate.map(function(candidateWord) {
-    candidateWord.articles = false;
     articlesList.forEach(function(articleLookup) {
       if (candidateWord["word"] === articleLookup["word"]) {
         candidateWord.articles = articleLookup.articles;
@@ -50,7 +104,9 @@ function formatRootIfIrregular(word) {
 }
 // ^^^ Add irregular verb constructions to this function as needed.
 
-candidates.forEach(function(candidate) {
-  makeNouns(candidate);
-  makeVerbs(candidate);
-});
+
+//DO THE WORK!
+for (var person in candidates) {
+  makeNouns(candidates[person]);
+  makeVerbs(candidates[person]);
+}

@@ -3,6 +3,34 @@
 //Instead, starting with a list of the 5000 most common words in English, I built my own dictionary. Using this as a starting point, the program (in the "makeWordObjects.js" file) will automatically check for new/unrecognized words every time I scrape Twitter. The unrecognized words will be logged to the console, and from there I can choose to either (1) add them to the dictionary (with their part of speech), (2) add them to the corrections list (if they're already in the dictionary and are only misspellings/tense differences), or (3) add them to the list of words to remove.
 var miniDictionary, corrections, removals;
 
+//For adding properties to words (ran one time at the start). Most non-proper nouns take "a/an/the", so we'll start there.
+
+//Want to distinguish nouns by: noun singular, noun plural, proper noun singular, proper noun plural, and pronoun.
+var newDict = miniDictionary.map(function(word) {
+  if (word["speech"] === "noun singular")
+    word.articles = ["the", "a"];
+    if (word.word.charAt(0).match(/[aeiou]/)) {
+      word.articles[1] = "an";
+    }
+    if (word["speech"].match(/plural/)) {
+      word.person = "plural";
+    }
+    if (word["speech"].match(/singular/)) {
+      word.person = "third";
+    }
+  if (word["speech"].match(/))
+    if (word["word"] === "you") {
+      word.person = "second";
+      word.articles = [];
+    }
+    if(word["word"] === "I") {
+      word.person = "first";
+      word.articles = [];
+    }
+  }
+  return word;
+});
+
 //Array of acceptable words with their part of speech.
 miniDictionary = [
   { word: "2016", speech: "noun singular" },
@@ -4229,7 +4257,6 @@ miniDictionary = [
   { word: "younger", speech: "adjective-comparison" },
   { word: "youngest", speech: "adjective" },
   { word: "your", speech: "definite article" },
-  { word: "yours", speech: "pronoun" },
   { word: "yourself", speech: "pronoun" },
   { word: "yourselves", speech: "noun plural" },
   { word: "zero", speech: "noun singular" },
@@ -5798,6 +5825,7 @@ removals = [
   "you’ll",
   "you’re",
   "you’re",
+  "yours",
   "zero'",
   "zeta"
 ];

@@ -1,7 +1,11 @@
-var sanders = [{ word: "advice" }, {word: "americans"}, {word: "$150"} ];
-var clinton = [{ word: "abuse" }];
-var cruz = [{ word: "Tuesday" }, { word: "opinion" }, { word: "terriblefumbled" }];
-
-var trump = [
-
-];
+//Array of each candidate's array of word objects
+//FORMAT:
+// var finalWords = {
+//   clinton: {
+//     adjectives: [
+//       {
+//         property: "test"
+//       }
+//     ]
+//   }
+// };

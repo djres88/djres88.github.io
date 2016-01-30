@@ -1,4 +1,4 @@
-//Get unique words (used below)
+//Get unique words for each candidate (used in getTweets below).
 function unique(array) {
   var result = [];
   array.forEach(function(item) {
@@ -42,7 +42,7 @@ function getTweets(handle) { // Pass the candidate's handle. Now it's easy to ad
     console.log("**********HERE ARE THE WORDS FOR", handle, "*********", wordsFinal); // Not mandatory but I like to have the visual when I run this in node.
 
     return wordsFinal;
-  }, 25000);
+  }, 10000);
 
 }
 

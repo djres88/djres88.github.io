@@ -1,6 +1,4 @@
-//I'm finding it convenient to take each candidate's words from the terminal printout and "freeze" a copy here with the last update date, just to keep track of when I made last copy. I know this file is not really necessary. At the same time, in a live version, I wouldn't be giving the user any of the files from the `make-word-objects` folder, anyway — the "make-word-objects" files are just the necessary prep work on my end to create the final candidate word objects (finalCandidateWords.js), which is the only file the user actually needs.
-
-//However, there will be a way to automate this once the dictionary is more filled out. After a few rounds of manual checking/building up the dictionary and corrections, I should be able to set the twitter scrape to run every 72 hours (or some interval) and just edit the functions to automatically remove any words it can't find in my dictionary.
+//EXTRA -- NOT NECESSARY TO CODE BUT USEFUL FOR TESTING. The variables below just freeze the results of the Twitter scrape for each candidate, same as 1-twitterScraper.js. But saving them here was useful for testing/troubleshooting; with the arrays saved here, I didn't need to scrape Twitter every time I wanted to play the code.
 
 var clinton = [
   { word: "Sunday" },

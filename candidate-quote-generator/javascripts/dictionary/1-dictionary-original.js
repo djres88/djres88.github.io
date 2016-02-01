@@ -3,7 +3,7 @@
 //Instead, starting with a list of the 5000 most common words in English, I built my own dictionary from the candidate's words, adding the part of speech to each word with vlookups to a csv of the Moby dictionary above. Using this as a starting point, I significantly reduced (but by no means eliminated) my manual labor. There was still a bunch of work — adding plurals, correcting all verb tenses to the infinitive form, removing weird words — but now the dictionary is large enough that it can take on almost any word (including most proper nouns) that shows up on any candidate's Twitter.
 
 
-var dictionary = [
+var dictionaryOriginal = [
   { word: '2016', speech: 'proper noun' },
   { word: '$$$$', speech: 'proper noun' },
   { word: '$10', speech: 'proper noun' },

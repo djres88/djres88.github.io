@@ -16,7 +16,7 @@ function isString(input) {
   }
 } // ^^ This part -- testing for a string -- is an important addition to the getRandom function. Given the tree-like data structure of the candidates' word-bjects, I'm using recursion to keep going deeper until a string is returned. For example, getting a random verb goes three levels deep (randomverb-randomtense-matchingperson), whereas a random adjective is just one level.
 
-var getRandom = function(input) {
+var randomUntilString = function(input) { // This recursive randomizer runs until you get a string. This is useful for getting a random verb from the tree-like structure of verb-objects.
   var index = 0, result;
   if (Array.isArray(input)) {
     index = randomArrayElement(input);
@@ -24,7 +24,7 @@ var getRandom = function(input) {
     if (isString(result)) { // Here's what I'm talking about up there^^^
       return result;
     } else {
-      return getRandom(result); // The recursion until you get a string.
+      return randomUntilString(result); // The recursion until you get a string.
     }
   } else {
     index = randomObjectKey(input);
@@ -33,13 +33,12 @@ var getRandom = function(input) {
     if (isString(result)) {
       return result;
     } else {
-      return getRandom(result);
+      return randomUntilString(result);
     }
   }
 }
 
-// W/O Recursion -- depends on data structure.
-var getRandom2 = function(input) {
+var random = function(input) { // Sometimes I'll just want a random object, without going on until I get a string.
   var index = 0, result;
 
   if (Array.isArray(input)) {

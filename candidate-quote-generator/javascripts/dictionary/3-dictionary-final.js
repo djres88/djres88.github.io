@@ -1,8 +1,10 @@
-//This is the dictionary that make-word-objects uses; I just included the original and associated functions to show how I made it.
+//The rest of the code (in make-word-objects) uses the following dictionary. The other files are only here as an illustration of how I got from the original dictionary to the version you see below.
 
-//This dictionary can be updated directly as needed. The code is set up to print new/unrecognized words every time I scrape Twitter. These unrecognized words will be logged to the console, and from there I can choose to either (1) add them to this dictionary (with their part of speech), (2) add them to the corrections list (if they're already in the dictionary and are only misspellings/tense differences), or (3) add them to the list of words to remove.
+//This dictionary can be updated directly as needed. Every time I re-scrape Twitter, the file '4-makeWordObject.js' removes any new/unrecognized words — that is, any words not found in the dictionary below. However, I also wrote a function to keep track of all unrecognized words in a variable. I can print this to the console as needed.
 
-// Here's the final array of acceptable words with their part of speech. For adding new words, note that acceptable parts of speech include:
+ // As the list of unrecognized words grows,  I can choose to either (1) add them to the dictionary below (with their part of speech); (2) add them to the corrections list (if they're already in the dictionary and are only misspellings/tense differences); or (3) add them to the list of words to remove. In that sense, this dictionary will be dynamic/growing without being too large/clunky. (The original dictionary had 230k+ entries.)
+
+//For adding new words, note that acceptable parts of speech include:
 // ADJECTIVES: adjective | adjective-comparison
 // ADVERBS: adverb;
 // CONJUNCTIONS/INTERJECTIONS: conjuction | interjection |

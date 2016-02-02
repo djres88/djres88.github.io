@@ -1,4 +1,4 @@
-//EXTRA -- NOT NECESSARY TO CODE BUT USEFUL FOR TESTING. The variables below just freeze the results of the Twitter scrape for each candidate, same as 1-twitterScraper.js. But saving them here was useful for testing/troubleshooting; with the arrays saved here, I didn't need to scrape Twitter every time I wanted to play the code.
+//EXTRA. NOT NECESSARY TO CODE — I'M NOT LOADING IT IN THE HTML — BUT IT WAS USEFUL FOR TESTING. The variables below just freeze the results of the Twitter scrape for each candidate, same as 1-twitterScraper.js. But saving them here was useful for testing/troubleshooting; with the arrays saved here, I didn't need to scrape Twitter every time I wanted to play the code.
 
 var clinton = [
   { word: "Sunday" },

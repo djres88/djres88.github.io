@@ -17,3 +17,5 @@ getRandom(verb.getRandom(tense))[person]
 
 
 quote =
+
+IDEA: count the number of end-of-sentence punctuation (periods, colons, semicolons, exclamation marks) and run the for-loop for that long.

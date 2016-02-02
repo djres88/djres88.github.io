@@ -29,29 +29,29 @@ var possessives = dictionaryOriginal.filter(function(entry) {
  return word["word"];
 });
 
-var quanitifiersSingular = dictionaryOriginal.filter(function(entry) {
+var quantifiersSingular = dictionaryOriginal.filter(function(entry) {
   return entry["speech"] === "quantifier singular";
 }).map(function(word) {
   return word["word"];
 });
 
-var quanitifiersPlural = dictionaryOriginal.filter(function(entry) {
+var quantifiersPlural = dictionaryOriginal.filter(function(entry) {
   return entry["speech"] === "quantifier plural";
 }).map(function(word) {
  return word["word"];
 });
 
 var dictionaryEditedNouns = dictionaryOriginal.map(function(entry) {
-  if isNoun(entry) {
-    if isSingular(entry) {
+  if (isNoun(entry)) {
+    if (isSingular(entry)) {
       entry.person = "third";
-      if startsWithVowel(entry) {
+      if (startsWithVowel(entry)) {
         entry.articles = ["the", "an", possessives, quantifiersSingular];
       } else {
         entry.articles = ["the", "a", possessives, quantifiersSingular];
       }
     }
-    else if isPlural(entry) {
+    else if (isPlural(entry)) {
       entry.person = "plural";
       entry.articles = ["", possessives, quantifiersPlural]; // Adding the other articles as variables is by design. I want it to be likelier that getRandom returns the/a/an or, in the cases of plural nouns, returns blank.
     } else { // Other nouns that do not receive an article, namely pronouns and proper nouns, will automatically draw a blank string. It seems easier for the sentence generator to ALWAYS draw a random article (even though, for proper nouns, it will be blank) than to add another level of logic — I would need to something like "draw an article if the article property exists." This seems easier.
@@ -59,50 +59,81 @@ var dictionaryEditedNouns = dictionaryOriginal.map(function(entry) {
       //Need to add the person (first/second/third/plural) manually. There aren't that many, so it's pretty quick to filter and change.
     }
   }
-}
+
+  return entry;
+});
 
 //VERBS
 
 //makeVerbs adds conjugated verb forms to each verb in the dictionary. English has TONS of irregular verbs, though, and not all of them follow an easily identifiable pattern. There are some high-level patterns I can code in — like if the verb ends in "e" or "y", I can remove/replace the last letter before conjugating it — but otherwise, there's no real advantage to coding in all the specific irregulars beforehand (buy/bought, build/built, give/gave). It's easier to run this code and then just find/replace the irregular verbs in Word.
 function makeVerbs(dict) {
-  return candidate.map(function(verb) {
-    if (verb["speech"].match(/verb\s/)) {
+  return dict.map(function(verb) {
+    if (verb["speech"].match(/\sverb/)) {
 
       var root = verb["word"];
-      var rootIrregular = irregularPatterns(root);
+      var pastRoot = pastIrregular(root);
+      var progressiveRoot = progressiveIrregular(root);
 
       //Add conjugations as properties in each verb-object.
       verb.present = {first: root, second: root, third: root + "s", plural: root};
-      verb.past = {first: rootIrregular + "ed", second: rootIrregular + "ed", third: rootIrregular + "ed", plural: rootIrregular + "ed"};
+      verb.past = {first: pastRoot + "ed", second: pastRoot + "ed", third: pastRoot + "ed", plural: pastRoot + "ed"};
       verb.future = {first: "will " + root, second: "will " + root, third: "will " + root, plural: "will " + root};
-      verb.presentProgressive = {first: "am " + root + "ing", second: "are " + root + "ing", third: "is " + root + "ing", plural: "are " + root + "ing"};
-      verb.presentPerfect = {first: "have " + rootIrregular + "ed", second: "have " + rootIrregular + "ed", third: "has " + rootIrregular + "ed", plural: "have " + rootIrregular + "ed"};
-      verb.pastProgressive = {first: "was " + root + "ing", second: "were " + root + "ing", third: "was " + root + "ing", plural: "were " + root + "ing"};
-      verb.pastPerfect = {first: "had " + rootIrregular + "ed", second: "had " + rootIrregular + "ed", third: "had " + rootIrregular + "ed", plural: "had " + rootIrregular + "ed"};
+      verb.presentProgressive = {first: "am " + progressiveRoot + "ing", second: "are " + progressiveRoot + "ing", third: "is " + progressiveRoot + "ing", plural: "are " + progressiveRoot + "ing"};
+      verb.presentPerfect = {first: "have " + pastRoot + "ed", second: "have " + pastRoot + "ed", third: "has " + pastRoot + "ed", plural: "have " + pastRoot + "ed"};
+      verb.pastProgressive = {first: "was " + progressiveRoot + "ing", second: "were " + progressiveRoot + "ing", third: "was " + progressiveRoot + "ing", plural: "were " + progressiveRoot + "ing"};
+      verb.pastPerfect = {first: "had " + pastRoot + "ed", second: "had " + pastRoot + "ed", third: "had " + pastRoot + "ed", plural: "had " + pastRoot + "ed"};
     }
     return verb;
   });
 }
 
-//Grab the last letter of the verb for conjugation/spelling. If the last letter is an e, it is (usually) removed when conjugating past/progressive/perfect tenses (e.g. believe --> believing, believed).
-
-function irregularPatterns(word) {
-  var lastLetter, newRoot;
-
-  lastLetter = word[word.length-1];
-
-  if (lastLetter.match(/[e]/)) {
-    newRoot = word.split("")
-    newRoot.pop();
-    newRoot = newRoot.join("");
+//A few functions to help replace/format irregular verbs.
+function endsInE(verbRoot) {
+  var lastLetter = verbRoot[verbRoot.length-1];
+  if (lastLetter === "e") {
+    return true;
   }
-  if (lastLetter.match(/[y]/)) {
-    newRoot = word.split("")
-    newRoot[newRoot.length-1] = "i"
-    newRoot = newRoot.join("");
+}
+
+function endsInY(verbRoot) {
+  var lastLetter = verbRoot[verbRoot.length-1];
+  if (lastLetter === "y") {
+    return true;
   }
-  return newRoot || word; // returns the newRoot or, if newRoot is undefined, returns the input word unchanged.
+}
+
+function removeLastLetter(verbRoot) {
+  var newRoot = verbRoot.split("");
+  newRoot.pop();
+  newRoot = newRoot.join("");
+  return newRoot;
+}
+
+function replaceLastLetter(verbRoot, replacement) {
+  var newRoot = verbRoot.split("");
+  newRoot[newRoot.length-1] = replacement;
+  newRoot = newRoot.join("");
+  return newRoot;
+}
+
+//Run the replacements/removals. Can add to these if you think of more irregular patterns.
+function pastIrregular(verb) {
+  if (endsInE(verb)) {
+    removeLastLetter(verb);
+  }
+  if (endsInY(verb)) {
+    replaceLastLetter(verb, "i");
+  }
+  return verb;
+}
+
+function progressiveIrregular(verb) {
+  if(endsInE(verb)) {
+    removeLastLetter(verb);
+  }
+  return verb;
 }
 // ^^^ Add irregular verb constructions to this function as needed.
 
+//DICTIONARY BEFORE MANUAL EDITS:
 var dictionaryUnedited = makeVerbs(dictionaryEditedNouns);

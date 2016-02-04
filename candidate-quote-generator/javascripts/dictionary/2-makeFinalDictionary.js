@@ -56,9 +56,9 @@ var dictionaryEditedNouns = dictionaryOriginal.map(function(entry) {
       if (isPronoun(entry)) {
       entry.articles = [""];
       } else if (startsWithVowel(entry)) {
-      entry.articles = ["the", "an", "possessives", "quantifiersSingular"]; // This structure is intentional. When pulling a random article, I want it to be much more likely (here, 50%) that the modifier is the/a/an; regular speech works that way.
+      entry.articles = ["the", "an", possessives, quantifiersSingular]; // This structure is intentional. When pulling a random article, I want it to be much more likely (here, 50%) that the modifier is the/a/an; regular speech works that way.
       } else {
-      entry.articles = ["the", "a", "possessives", "quantifiersSingular"]; //<--replace "possessives" with the variable after printing to console.
+      entry.articles = ["the", "a", possessives, quantifiersSingular]; //<--replace "possessives" with the variable after printing to console.
       }
     }
 
@@ -67,7 +67,7 @@ var dictionaryEditedNouns = dictionaryOriginal.map(function(entry) {
       if (isPronoun(entry)) {
         entry.articles = [""];
       } else
-        entry.articles = ["", "", "possessives", "quantifiersPlural"]; // Once again, adding two null strings is by design. When pulling a random article, plural nouns will NOT have an article 50% of the time. It seems much easier to add this functionality here than to add another logic to the sentence constructor.
+        entry.articles = ["", "", possessives, quantifiersPlural]; // Once again, adding two null strings is by design. When pulling a random article, plural nouns will NOT have an article 50% of the time. It seems much easier to add this functionality here than to add another logic to the sentence constructor.
     }
 
     else { // Other nouns that do not receive an article — namely mass nouns and proper nouns — will automatically draw a blank string. It's easier to code this here than to embed the logic in the sentence constructor.

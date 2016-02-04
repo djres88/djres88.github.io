@@ -1,13 +1,3 @@
-//This file takes each candidate's array of words and corrects/filters out the "mistakes". I'm maintaining a number of words to fix/remove so that the word (a) makes sense and (b)) be found in the dictionary. For example, all non-present verb tenses are changed to the infinitive form, and contractions like "i'll" are removed.
-
-//Object of candidates. The sentence constructor works better if all candidates are in one object (I can get a random candidate that way).
-var candidates = {
-  cruz: cruz,
-  clinton: clinton,
-  sanders: sanders,
-  trump: trump
-}
-
 //CORRECTIONS
 //Array of words to edit from vocabulary (due to misspellings, change of tense, etc.), where array[n][0] is the original word and array[n][1] is the corrected word. The make-word-objects files rely on these
 var corrections = [
@@ -1482,33 +1472,3 @@ var removals = [
   'yours',
   'zeta'
 ];
-
-//corrects "mistakes", capitalizes proper nouns, fixes tenses, etc. for each candidate -- NEED TO TROUBLESHOOT
-function replaceWords(candidate, editsList) {
-  return candidate.map(function(candidateWord) {
-    editsList.forEach(function(item) {
-      if (candidateWord["word"] === item[0]) {
-        candidateWord["word"] = item[1];
-      }
-    });
-    return candidateWord;
-  });
-};
-
-//Replaces unwanted words for each candidate.
-function removeWords(candidate, removeList) {
-  return candidate.filter(function(candidateWord) {
-     removeList.forEach(function(wordToRemove) {
-       if (candidateWord["word"] === wordToRemove) {
-         candidateWord["word"] = "remove";
-       }
-     });
-     return candidateWord["word"] !== "remove";
-  });
-};
-
-//runs the above code for each candidate
-for (var person in candidates) {
-  candidates[person] = removeWords(candidates[person], removals);
-  candidates[person] = replaceWords(candidates[person], corrections);
-};

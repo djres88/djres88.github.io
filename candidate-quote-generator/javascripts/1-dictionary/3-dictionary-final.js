@@ -1,5 +1,3 @@
-//The rest of the code (in make-word-objects) uses the following dictionary. The other files are only here as an illustration of how I got from the original dictionary to the version you see below.
-
 //This dictionary can be updated directly as needed. Every time I re-scrape Twitter, the file '4-makeWordObject.js' removes any new/unrecognized words — that is, any words not found in the dictionary below. However, I also wrote a function to keep track of all unrecognized words in a variable. I can print this to the console as needed.
 
  // As the list of unrecognized words grows,  I can choose to either (1) add them to the dictionary below (with their part of speech); (2) add them to the corrections list (if they're already in the dictionary and are only misspellings/tense differences); or (3) add them to the list of words to remove. In that sense, this dictionary will be dynamic/growing without being too large/clunky. (The original dictionary had 230k+ entries.)
@@ -12,6 +10,75 @@
 // PREPOSITIONS: preposition;
 //-VERBS: transitive-verb | intransitive-verb <--- intransitive-verbs are a work in progress
 // NOTE: you do not need to add pronouns/question words/quantifiers as all of these are already present in the dictionary.
+
+var possessives =
+[ 'America\'s',
+  'Americans',
+  'Americans\'',
+  'Bernie Sanders\'',
+  'Bernie\'s',
+  'Democrats\'',
+  'Donald Trump\'s',
+  'everybody\'s',
+  'everyone\'s',
+  'founders\'',
+  'God\'s',
+  'her',
+  'hers',
+  'Hillary Clinton\'s',
+  'Hillary\'s',
+  'his',
+  'its',
+  'Jeb Bush\'s',
+  'man\'s',
+  'Martin Luther King\'s',
+  'MLK\'s',
+  'mom\'s',
+  'mother\'s',
+  'my',
+  'nation\'s',
+  'nobody\'s',
+  'NPR\'s',
+  'NRA\'s',
+  'our',
+  'people\'s',
+  'Sarah Palin\'s',
+  'someone\'s',
+  'Ted Cruz\'s',
+  'terrorists\'',
+  'their',
+  'Trump\'s',
+  'whose',
+  'woman\'s',
+  'women\'s',
+  'yesterday\'s',
+  'your'
+];
+
+var quantifiersSingular = [
+  'another',
+  'each',
+  'either',
+  'every',
+  'much',
+  'neither',
+  'one',
+  'some'
+];
+
+var quantifiersPlural = [
+ 'all',
+ 'both',
+ 'dozens of',
+ 'enough',
+ 'few',
+ 'less',
+ 'many',
+ 'more',
+ 'most',
+ 'such'
+];
+
 
 var dictionary = [
   { word: '2016',

@@ -36,5 +36,3 @@ var candidate1words = myCandidate1.words;
 var candidate1name = myCandidate1.nametag;
 var candidate2words = myCandidate2.words;
 var candidate2name = myCandidate2.nametag;
-
-// function randomTense()

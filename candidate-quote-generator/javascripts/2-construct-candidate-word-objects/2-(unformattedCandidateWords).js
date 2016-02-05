@@ -1,6 +1,6 @@
 //EXTRA. NOT NECESSARY TO CODE — I'M NOT LOADING IT IN THE HTML — BUT IT WAS USEFUL FOR TESTING. The variables below just freeze the results of the Twitter scrape for each candidate, same as 1-twitterScraper.js. But saving them here was useful for testing/troubleshooting; with the arrays saved here, I didn't need to scrape Twitter every time I wanted to play the code.
 
-var clinton = [
+var clintonWords = [
   { word: "Sunday" },
   { word: "January" },
   { word: "May" },
@@ -1032,7 +1032,7 @@ var clinton = [
   { word: "your" },
   { word: "zones" }
 ];
-var cruz = [
+var cruzWords = [
   { word: "Wednesday" },
   { word: "Saturday" },
   { word: "2013" },
@@ -1487,7 +1487,7 @@ var cruz = [
   { word: "your" },
   { word: "yours" }
 ];
-var sanders = [
+var sandersWords = [
   { word: "2016" },
   { word: "April" },
   { word: "May" },
@@ -2988,7 +2988,7 @@ var sanders = [
   { word: "yourself" },
   { word: "zero" }
 ];
-var trump = [
+var trumpWords = [
   { word: "Tuesday" },
   { word: "$$$$" },
   { word: "$10" },

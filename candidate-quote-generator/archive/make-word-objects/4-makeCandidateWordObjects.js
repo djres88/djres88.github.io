@@ -1,21 +1,9 @@
 //Object of candidates. The sentence constructor works better if all candidates are in one object (I can get a random candidate that way).
 var candidates = {
-  clinton: {
-    words: clintonWords,
-    nametag: "Hillary Clinton"
-  },
-  cruz: {
-    words: cruzWords,
-    nametag: "Ted Cruz"
-  },
-  sanders: {
-    words: sandersWords,
-    nametag: "Bernie Sanders"
-  },
-  trump: {
-    words: trumpWords,
-    nametag: "Donald Trump"
-  }
+  cruz: cruz,
+  clinton: clinton,
+  sanders: sanders,
+  trump: trump
 }
 
 //First, we want functions that implement the corrections to each candidate's vocabulary.
@@ -42,8 +30,8 @@ function removeWords(candidate, removeList) {
   });
 };
 
-//Next, addFromDictionary goes through each word in each candidate's (edited/corrected) vocabulary and looks for that word in dictionary-final.js. If the word is found, then the word-object from the dictionary is added to the candidate's array.
-function addFromDictionary(candidate, dict) {
+//Next, addWords goes through each word in each candidate's (edited/corrected) vocabulary and looks for that word in dictionary-final.js. If the word is found, then the word-object from the dictionary is added to the candidate's array.
+function addWords(candidate, dict) {
   var result = candidate.map(function(candidateWord) {
     dict.forEach(function(entry) {
       if (candidateWord.word === entry.word) {
@@ -69,7 +57,7 @@ var newWords = function(candidate) {
 
 //runs the above code for each candidate
 for (var person in candidates) {
-  candidates[person].words = removeWords(candidates[person]["words"], removals);
-  candidates[person].words = replaceWords(candidates[person]["words"], corrections);
-  candidates[person].words = addFromDictionary(candidates[person]["words"], dictionary);
-}
+  candidates[person] = removeWords(candidates[person], removals);
+  candidates[person] = replaceWords(candidates[person], corrections);
+  candidates[person] = addWords(candidates[person], dictionary);
+};

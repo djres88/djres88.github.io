@@ -1,4 +1,12 @@
-var random = function(input) { // Sometimes I'll just want a random object, without going on until I get a string.
+function randomObjectKey(input) {
+  return Math.floor(Math.random()*Object.keys(input).length);
+}
+
+function randomArrayElement(input) {
+  return Math.floor(Math.random()*input.length);
+}
+
+var getRandom = function(input) { // Sometimes I'll just want a random object, without going on until I get a string.
   var index = 0, result;
   if (Array.isArray(input)) {
     index = randomArrayElement(input);
@@ -11,26 +19,22 @@ var random = function(input) { // Sometimes I'll just want a random object, with
   return result;
 }
 
-var clinton = {
-  nametag: "Hillary Clinton",
-  words: candidates["clinton"]
+//If we're doing a random matchup, we'll want to make sure the candidates are different.
+var myCandidate1 = getRandom(candidates);
+function findOpponent() {
+  var opponent = getRandom(candidates);
+  if (opponent === myCandidate1) {
+    return findOpponent(candidates);
+  } else {
+    return opponent;
+  }
 }
-var trump = {
-  nametag: "Donald Trump",
-  words: candidates["trump"]
-}
-var sanders = {
-  nametag: "Bernie Sanders",
-  words: candidates["sanders"]
-}
-var cruz = {
-  nametag: "Ted Cruz",
-  words: candidates["cruz"]
-}
+var myCandidate2 = findOpponent();
 
-function getRandomWord(partOfSpeech, candidate) {
-  var wordsOfThisType = candidate.filter(function(words) {
-    return words.speech === partOfSpeech;
-  })
-  return random(wordsOfThisType);
-}
+//Isolate the words from the nametag.
+var candidate1words = myCandidate1.words;
+var candidate1name = myCandidate1.nametag;
+var candidate2words = myCandidate2.words;
+var candidate2name = myCandidate2.nametag;
+
+// function randomTense()

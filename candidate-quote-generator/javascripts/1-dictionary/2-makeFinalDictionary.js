@@ -9,12 +9,12 @@ function isNoun(entry) {
   }
 }
 function isSingular(entry) {
-  if (entry["speech"] === "singular noun" || entry["speech"] === "pronoun singular") {
+  if (entry["speech"] === "singular-noun" || entry["speech"] === "pronoun-singular") {
     return true;
   }
 }
 function isPlural(entry) {
-  if (entry["speech"] === "plural noun" || entry["speech"] === "pronoun plural") {
+  if (entry["speech"] === "plural-noun" || entry["speech"] === "pronoun-plural") {
     return true;
   }
 }
@@ -37,13 +37,13 @@ var possessives = dictionaryOriginal.filter(function(entry) {
 });
 
 var quantifiersSingular = dictionaryOriginal.filter(function(entry) {
-  return entry["speech"] === "quantifier singular";
+  return entry["speech"] === "quantifier-singular";
 }).map(function(word) {
   return word["word"];
 });
 
 var quantifiersPlural = dictionaryOriginal.filter(function(entry) {
-  return entry["speech"] === "quantifier plural";
+  return entry["speech"] === "quantifier-plural";
 }).map(function(word) {
  return word["word"];
 });
@@ -121,7 +121,6 @@ function replaceLastLetter(verbRoot, replacement) {
   newRoot = newRoot.join("");
   return newRoot;
 }
-
 
 //Run the replacements/removals for each tense. Can add to these if you think of more irregular patterns:
 function presentIrregular(verb) {

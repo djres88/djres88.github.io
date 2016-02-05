@@ -47,7 +47,7 @@ function getTweets(handle) { // Pass the candidate's handle. Now it's easy to ad
 }
 
 //Create word-objects for each candidate.
-var clinton = getTweets("HillaryClinton");
-var cruz = getTweets("TedCruz");
-var sanders = getTweets("BernieSanders");
-var trump = getTweets("realDonaldTrump");
+var clintonWords = getTweets("HillaryClinton");
+var cruzWords = getTweets("TedCruz");
+var sandersWords = getTweets("BernieSanders");
+var trumpWords = getTweets("realDonaldTrump");

@@ -1,3 +1,18 @@
+function pullRandomWord(partOfSpeech, candidateWords) {
+  var wordsOfThisType = candidateWords.filter(function(entry) {
+    return entry.speech === partOfSpeech;
+  })
+  return getRandom(wordsOfThisType);
+}
+
+
+
+
+
+
+
+
+
 sentence constructor
 
 function person(nounObject) {

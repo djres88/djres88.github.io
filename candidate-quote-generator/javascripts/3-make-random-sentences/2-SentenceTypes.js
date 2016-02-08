@@ -55,7 +55,7 @@ function isVerb(word) {
 function addArticle(sentence, index) {
   if (index === 0) {
     sentence.splice(index, 0, getRandom(sentence[index]["articles"]));
-  } else if (sentence[index-1]["speech"] === "adjective") {
+  } else if (isAdjective(sentence[index-1])) {
     sentence.splice(index-1, 0, getRandom(sentence[index]["articles"]));
   } else {
     sentence.splice(index, 0, getRandom(sentence[index]["articles"]));
@@ -73,9 +73,8 @@ function generateFinalSentence(sentence) {
       addArticle(sentence, i);
       i++; // need to increment one extra since the sentence is now one word longer with the added article.
     } else {
-        getWord = sentence[i]["word"];
-      }
-    )
+      getWord = sentence[i]["word"];
+    }
   }
   return sentence;
 }

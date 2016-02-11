@@ -25,16 +25,16 @@ var sentenceTest = [ { word: 'somebody',
     articles: [ '' ] },
   { word: 'receive',
     speech: 'transitive-verb',
-    present:
-     { first: 'receive',
-       second: 'receive',
-       third: 'receives',
-       plural: 'receive' },
-    future:
-     { first: 'will receive',
-       second: 'will receive',
-       third: 'will receive',
-       plural: 'will receive' } },
+    "present":
+     { "first": 'receive',
+       "second": 'receive',
+       "third": 'receives',
+       "plural": 'receive' },
+    "future":
+     { "first": 'will receive',
+       "second": 'will receive',
+       "third": 'will receive',
+       "plural": 'will receive' } },
   { word: 'word',
     speech: 'singular-noun',
     person: 'third',
@@ -43,7 +43,8 @@ var sentenceTest = [ { word: 'somebody',
 
 //sentenceStructure includes several potential sentence types. Each sentence type is followed by the position of the subject
 var sentenceStructure = [
-  "subject transitive-verb noun"
+  "subject transitive-verb noun",
+  "subject transitive-verb adjective noun"
 ];
 
 var subjectPosition; //Gets the index of the subject in the sentence. Used for subject/verb agreement later.
@@ -104,7 +105,7 @@ function sentenceOfObjects(string, candidate) {
 
 
 //Run the functions
-
+console.log(sentenceOfObjects(getRandom(sentenceStructure), sentenceTest))
 function generateFinalSentence() {
   var sentence = sentenceOfObjects(getRandom(sentenceStructure), sentenceTest);
   for (var i = 0; i < sentence.length; i++) {
@@ -117,7 +118,7 @@ function generateFinalSentence() {
     } else if (isVerb(word)) {
       var myTense = getRandom(tense);
       var person = sentence[subjectPosition]["person"];
-      updated_word = word[tense][person]; // in a random tense, find a verb conjugation that matches the person of the subject
+      updated_word = word[myTense][person]; // in a random tense, find a verb conjugation that matches the person of the subject
     } else if (isNoun(word)) {
       addArticle(sentence, i);
       i++; // need to increment one extra since the sentence is now one word longer with the added article.

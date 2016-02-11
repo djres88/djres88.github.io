@@ -4,29 +4,23 @@
 
 //helper functions that distinguish the different types of nouns
 function isNoun(entry) {
-  if (entry["speech"].match(/noun/)) {
-    return true;
-  }
+  return Boolean(entry["speech"].match(/noun/))
 }
+
 function isSingular(entry) {
-  if (entry["speech"] === "singular-noun" || entry["speech"] === "pronoun-singular") {
-    return true;
-  }
+  return Boolean(entry["speech"] === "singular-noun" || entry["speech"] === "pronoun-singular")
 }
+
 function isPlural(entry) {
-  if (entry["speech"] === "plural-noun" || entry["speech"] === "pronoun-plural") {
-    return true;
-  }
+  return Boolean(entry["speech"] === "plural-noun" || entry["speech"] === "pronoun-plural")
 }
+
 function isPronoun(entry) {
-  if(entry["speech"].match(/pronoun/)) {
-    return true;
-  }
+  return Boolean(entry["speech"].match(/pronoun/))
 }
+
 function startsWithVowel(entry) {
-  if(entry["word"].charAt(0).match(/[aeiou]/)) {
-    return true;
-  }
+  return Boolean (entry["word"].charAt(0).match(/[aeiou]/))
 }
 
 //The variables below hold article-like words that modify nouns. These include possessives (Obama's, our), singular quantifiers (one, this), and plural quantifiers (those, many).

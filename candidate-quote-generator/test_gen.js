@@ -1,3 +1,46 @@
+function randomObjectKey(input) {
+  return Math.floor(Math.random()*Object.keys(input).length);
+}
+
+function randomArrayElement(input) {
+  return Math.floor(Math.random()*input.length);
+}
+
+var getRandom = function(input) { // Sometimes I'll just want a random object, without going on until I get a string.
+  var index = 0, result;
+  if (Array.isArray(input)) {
+    index = randomArrayElement(input);
+    result = input[index];
+  } else {
+    index = randomObjectKey(input);
+    var keyName = Object.keys(input)[index];
+    result = input[keyName];
+  }
+  return result;
+}
+
+var sentenceTest = [ { word: 'somebody',
+    speech: 'pronoun-singular',
+    person: 'third',
+    articles: [ '' ] },
+  { word: 'receive',
+    speech: 'transitive-verb',
+    present:
+     { first: 'receive',
+       second: 'receive',
+       third: 'receives',
+       plural: 'receive' },
+    future:
+     { first: 'will receive',
+       second: 'will receive',
+       third: 'will receive',
+       plural: 'will receive' } },
+  { word: 'word',
+    speech: 'singular-noun',
+    person: 'third',
+    articles: [ 'the', 'a', [Object], [Object] ] } ];
+
+
 //sentenceStructure includes several potential sentence types. Each sentence type is followed by the position of the subject
 var sentenceStructure = [
   "subject transitive-verb noun"
@@ -12,6 +55,10 @@ function isAdjective(word) {
 
 function isVerb(word) {
   return Boolean(word["speech"].match(/-verb/))
+}
+
+function isNoun(entry) {
+  return Boolean(entry["speech"].match(/noun/))
 }
 
 function addArticle(sentence, index) {
@@ -59,7 +106,7 @@ function sentenceOfObjects(string, candidate) {
 //Run the functions
 
 function generateFinalSentence() {
-  var sentence = sentenceOfObjects(getRandom(sentenceStructure), candidate1words);
+  var sentence = sentenceOfObjects(getRandom(sentenceStructure), sentenceTest);
   for (var i = 0; i < sentence.length; i++) {
 
     var word = sentence[i];

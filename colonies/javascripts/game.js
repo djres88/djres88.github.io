@@ -29,8 +29,8 @@ Game.prototype.draw = function (ctx) {
     return;
   } else {
     ctx.clearRect(0, 0, this.DIM_X, this.DIM_Y);
-    this.planets.forEach(function(planet) {
-      planet.draw(ctx);
+    this.planets.forEach(function(planet, idx) {
+      planet.draw(ctx, idx+1);
     });
 
     this.bullets.forEach(function(bullet) {
@@ -63,11 +63,11 @@ Game.prototype.logCollisions = function() {
     game.bullets.forEach(function(bullet, bulletIdx) {
       if (planet.hitBy(bullet)) {
         planet.damage();
-        game.bullets.splice(bulletIdx);
+        game.bullets = game.bullets.slice(0, bulletIdx).concat(game.bullets.slice(bulletIdx+1, game.bullets.length));
       }
       if (bullet.pos[0] < 0 || bullet.pos[0] > 1600 ||
         bullet.pos[1] < 0 || bullet.pos[1] > 800) {
-        game.bullets.splice(bulletIdx);
+        game.bullets = game.bullets.slice(0, bulletIdx).concat(game.bullets.slice(bulletIdx+1, game.bullets.length));
       }
     });
 

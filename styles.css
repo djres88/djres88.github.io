@@ -3,6 +3,37 @@ body {
   font-family: 'Asap', sans-serif;
 }
 
+li {
+  list-style-type: none;
+  color: white;
+}
+
+h2 {
+  font-size: 30em;
+}
+
+.btn {
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin-top: 4px;
+  color: white;
+  border: white;
+  border-style: solid;
+  border-width: 2px;
+  background: rgba(10,10,10,0.6);
+  width: 180px;
+}
+
+.btn:hover {
+  background-color: white;
+  border-color: black;
+}
+
+.section-header {
+  margin-top: 50px;
+  font-size: 40px;
+}
+
 /*Navbar*/
 .navbar-custom {
   background: black;
@@ -31,7 +62,7 @@ body {
   background-image: url(http://img.thesun.co.uk/aidemitlum/archive/01085/Labrador_in-car_68_1085457a.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 800px;
+  height: 100vh;
   background-position-x: 50%;
   background-position-y: 50%;
   background-attachment: fixed;
@@ -64,52 +95,20 @@ body {
 
 #profilePic {
   width: 75%;
-  max-width: 400px;
-  height: 75%;
 }
 
-/*Buttons*/
-li {
-  list-style-type: none;
-  color: white;
-}
-
-.btn {
-  font-size: 18px;
-  letter-spacing: 1px;
-  margin-top: 4px;
-  color: white;
-  border: white;
-  border-style: solid;
-  border-width: 2px;
-  background: rgba(10,10,10,0.6);
-  width: 180px;
-}
-
-.btn:hover {
-  background-color: white;
-  border-color: black;
-}
-
-
-
-.section-header {
-  margin-top: 50px;
-  font-size: 40px;
-}
-
-
+/*Projects*/
 .projects {
   height: 100vh;
   background-image: url(http://i.space.com/images/i/000/015/590/wW4/atlas-launch-muos-1920.jpg?1330542179);
-  background-size: cover;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: white;
 }
 
 .projects img {
-  max-width: 78%;
+  max-width: 100%;
   height: auto;
   margin-top: 20px;
 }
@@ -141,8 +140,9 @@ li {
   color: black;
 }
 
+/*Connect*/
 .connect {
-  height: 600px;
+  height: 100vh;
   background-image: url('./images/post-box.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -152,9 +152,10 @@ li {
   color: white;
 }
 
-#connectMsg {
-  margin-top: 160px;
+#connect-msg {
+  margin-top: 18%;
   text-align: center;
+  font-size: 6em;
 }
 
 .connect .row {
@@ -165,6 +166,7 @@ li {
   margin: 5px;
 }
 
+/*Footer*/
 footer {
   height: 150px;
 }

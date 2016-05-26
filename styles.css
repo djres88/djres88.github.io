@@ -66,6 +66,7 @@ h2 {
   height: 100vh;
   background-position-x: 50%;
   background-position-y: 50%;
+  background-attachment: fixed;
   background-origin: initial;
   background-clip: initial;
   background-color: initial;

@@ -56,7 +56,7 @@ h2 {
 .above-fold-header {
   background: rgba(184,184,184,0.75);
   width: 50%;
-  min-height: 20%;
+  min-height: 25%;
 }
 
 .aboveFold {
@@ -74,13 +74,13 @@ h2 {
 
 .aboveFold .container {
   color: black;
-  top: 36%;
+  top: 40%;
   position: relative;
   text-align: center;
 }
 
 .aboveFold .container h1 {
-  font-size: 50px;
+  font-size: 6em;
   color: black;
 }
 
@@ -95,7 +95,6 @@ h2 {
 }
 
 #profilePic {
-  margin-top: 20%;
   width: 75%;
 }
 

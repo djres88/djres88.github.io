@@ -1,6 +1,77 @@
-/*Default styles*/
+/*Defaults*/
+body {
+  font-family: 'Asap', sans-serif;
+}
+
+/*Navbar*/
+.navbar-custom {
+  background: black;
+  border: none;
+  color: black;
+}
+
+.navbar-default .navbar-brand {
+  color: white;
+  font-weight: bold;
+}
+
+.nav.navbar-nav.navbar-right li a {
+  color: white;
+  font-weight: bold;
+}
+
+/*above fold*/
+.above-fold-header {
+  background: rgba(184,184,184,0.75);
+  width: 50%;
+  min-height: 20%;
+}
+
+.aboveFold {
+  background-image: url(http://img.thesun.co.uk/aidemitlum/archive/01085/Labrador_in-car_68_1085457a.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 800px;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-attachment: fixed;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+}
+
+.aboveFold .container {
+  color: black;
+  top: 36%;
+  position: relative;
+  text-align: center;
+}
+
+.aboveFold .container h1 {
+  font-size: 50px;
+  color: black;
+}
+
+/*Bio*/
+.bio {
+  height: 100vh;
+  text-align: left;
+  background-color: white;
+  color: black;
+  background-size: 16px 16px;
+  font-size: 23px;
+}
+
+#profilePic {
+  width: 75%;
+  max-width: 400px;
+  height: 75%;
+}
+
+/*Buttons*/
 li {
   list-style-type: none;
+  color: white;
 }
 
 .btn {
@@ -20,70 +91,19 @@ li {
   border-color: black;
 }
 
-.aboveFold {
-  background-image: url(http://img.thesun.co.uk/aidemitlum/archive/01085/Labrador_in-car_68_1085457a.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 800px;
-  background-position-x: 50%;
-  background-position-y: 50%;
-  background-attachment: fixed;
-  background-origin: initial;
-  background-clip: initial;
-  background-color: initial;
-}
 
-.aboveFold .container {
-  color: white;
-  top: 36%;
-  position: relative;
-  text-align: center;
-}
-
-.aboveFold .container h1 {
-  -webkit-text-stroke: 1px white;
-  font-size: 50px;
-  color: black;
-}
-
-.aboveFold .container .row {
-  margin-right: 120px;
-  margin-left: 120px;
-}
-
-.bio {
-  height: 600px;
-  text-align: left;
-  background:
-    radial-gradient(black 15%, transparent 16%) 0 0,
-    radial-gradient(black 15%, transparent 16%) 8px 8px,
-    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
-    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
-  background-color: #282828;
-  color: white;
-  background-size: 16px 16px;
-  background-position-x: 50%;
-  background-position-y: 50%;
-  font-size: 23px;
-}
 
 .section-header {
   margin-top: 50px;
   font-size: 40px;
 }
 
-#profilePic {
-  width: 50%;
-  max-width: 200px;
-}
 
 .projects {
-  height: 800px;
+  height: 100vh;
   background-image: url(http://i.space.com/images/i/000/015/590/wW4/atlas-launch-muos-1920.jpg?1330542179);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position-x: 50%;
-  background-position-y: 50%;
   background-attachment: fixed;
   color: white;
 }
@@ -95,14 +115,9 @@ li {
 }
 
 .project-image-overlay {
-  color: white;
+  color: black;
   text-align: center;
-  background:
-    radial-gradient(black 15%, transparent 16%) 0 0,
-    radial-gradient(black 15%, transparent 16%) 8px 8px,
-    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
-    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
-  background-color: #282828;
+  background-color: white;
   background-size: 16px 16px;
   max-width: 78%;
   margin-top: -30px;
@@ -121,22 +136,14 @@ li {
 }
 
 .blog {
-  height: 600px;
-  background:
-    radial-gradient(black 15%, transparent 16%) 0 0,
-    radial-gradient(black 15%, transparent 16%) 8px 8px,
-    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
-    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
-  background-color: #282828;
-  color: white;
-  background-size: 16px 16px;
-  background-position-x: 50%;
-  background-position-y: 50%;
+  height: 100vh;
+  background-color: white;
+  color: black;
 }
 
 .connect {
   height: 600px;
-  background-image: url(https://upload.wikimedia.org/wikipedia/commons/f/f4/Actor_portraying_Alexander_Graham_Bell_in_an_AT%26T_promotional_film_\(1926\).jpg);
+  background-image: url('./images/post-box.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position-x: 50%;

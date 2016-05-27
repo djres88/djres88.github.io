@@ -40,11 +40,14 @@
     background: black;
     border: none;
     color: black;
+    height: 10%;
+    font-size: 1.5em;
   }
 
   .navbar-default .navbar-brand {
     color: white;
     font-weight: bold;
+    font-size: 1em;
   }
 
   .nav.navbar-nav.navbar-right li a {
@@ -61,8 +64,9 @@
 
   .aboveFold {
     background-image: url(http://img.thesun.co.uk/aidemitlum/archive/01085/Labrador_in-car_68_1085457a.jpg);
-    background-size: cover;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     height: 100vh;
     background-position-x: 50%;
     background-position-y: 50%;
@@ -73,10 +77,10 @@
     top: 36%;
     position: relative;
     text-align: center;
-    width: 100%;
-    max-width: 960px;
+    width: 65%;
+    max-width: 800px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 20px 20px 50px 20px;
   }
 
   .aboveFold .container h1 {
@@ -95,7 +99,6 @@
   }
 
   #profilePic {
-    margin-top: 20%;
     width: 75%;
   }
 
@@ -106,7 +109,6 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    color: white;
   }
 
   .projects img {
@@ -146,7 +148,7 @@
   .connect {
     height: 100vh;
     background-image: url('./images/post-box.jpg');
-    background-size: cover;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position-x: 50%;
     background-position-y: 50%;

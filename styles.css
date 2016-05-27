@@ -1,185 +1,217 @@
 
 /*Defaults*/
-  body {
-    font-family: 'Asap', sans-serif;
-  }
+body {
+  font-family: 'Asap', sans-serif;
+}
 
-  li {
-    list-style-type: none;
-    color: white;
-  }
+li {
+  list-style-type: none;
+  color: white;
+}
 
-  h2 {
-    font-size: 30em;
-  }
+.btn {
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin-top: 4px;
+  color: white;
+  border: white;
+  border-style: solid;
+  border-width: 2px;
+  background: rgba(10,10,10,0.6);
+  width: 180px;
+  transition: all 0.5s ease 0s;
+}
 
-  .btn {
-    font-size: 18px;
-    letter-spacing: 1px;
-    margin-top: 4px;
-    color: white;
-    border: white;
-    border-style: solid;
-    border-width: 2px;
-    background: rgba(10,10,10,0.6);
-    width: 180px;
-  }
+.btn:hover {
+  background-color: white;
+  border-color: black;
+}
 
-  .btn:hover {
-    background-color: white;
-    border-color: black;
-  }
+.section-header {
+  font-size: 3em;
+  margin: 4% 0 2% 0;
+  font-weight: 700;
+}
 
-  .section-header {
-    margin-top: 50px;
-    font-size: 40px;
-  }
+.connect h3 {
+  color: white;
+  text-decoration: underline;
+}
 
-  /*Navbar*/
-  .navbar-custom {
-    background: black;
-    border: none;
-    color: black;
-    height: 10%;
-    font-size: 1.5em;
-  }
+.connect h3:hover {
+  color: #337ab7;
+  transition: all 0.3s ease 0s;
+}
+/*Hyperlinks*/
+.hyperlinks {
+  position: absolute;
+  margin-top: -5%;
+}
 
-  .navbar-default .navbar-brand {
-    color: white;
-    font-weight: bold;
-    font-size: 1em;
-  }
+/*Navbar*/
+.navbar-custom {
+  background: black;
+  border: none;
+  color: black;
+  height: 10%;
+  font-size: 1.5em;
+}
 
-  .nav.navbar-nav.navbar-right li a {
-    color: white;
-    background-color: black;
-    font-weight: bold;
-  }
+.navbar-default .navbar-brand {
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  line-height: 2;
+}
 
-  /*above fold*/
-  .above-fold-header {
-    background: rgba(184,184,184,0.75);
-    width: 50%;
-    min-height: 20%;
-  }
+.nav.navbar-nav.navbar-right li a {
+  color: white;
+  background-color: black;
+  font-weight: bold;
+  line-height: 2;
+}
 
-  .aboveFold {
-    background-image: url('./images/car-dog.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position-x: center;
-    background-position-y: 40%;
-    height: 100vh;
-  }
+/*above fold*/
+.above-fold-header {
+  background: rgba(184,184,184,0.75);
+  width: 50%;
+  min-height: 20%;
+}
 
-  .aboveFold .container {
-    color: black;
-    top: 36%;
-    position: relative;
-    text-align: center;
-    width: 65%;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px 20px 50px 20px;
-  }
+.aboveFold {
+  background-image: url('./images/car-dog.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position-x: center;
+  background-position-y: 50%;
+  height: 100vh;
+}
 
-  .aboveFold .container h1 {
-    font-size: 50px;
-    color: black;
-  }
+.aboveFold .container {
+  color: black;
+  top: 36%;
+  position: relative;
+  text-align: center;
+  width: 65%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px 20px 50px 20px;
+}
 
-  /*Bio*/
-  .bio {
-    height: 100vh;
-    text-align: left;
-    background-color: white;
-    color: black;
-    background-size: 16px 16px;
-    font-size: 1.5em;
-  }
+.aboveFold .container h1 {
+  font-size: 4em;
+  font-weight: 700;
+  color: black;
+}
 
-  #profilePic {
-    width: 75%;
-  }
+/*Bio*/
+.bio {
+  height: 100%;
+  min-height: 83vh;
+  text-align: left;
+  background-color: white;
+  color: black;
+  background-size: 16px 16px;
+  font-size: 1.5em;
+  padding-bottom: 10%;
+}
 
-  /*Projects*/
-  .projects {
-    height: 100vh;
-    background-image: url(http://i.space.com/images/i/000/015/590/wW4/atlas-launch-muos-1920.jpg?1330542179);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  }
+.bio h2 {
+  font-size: 2.5em;
+}
 
-  .projects img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 20px;
-  }
+#profilePic {
+  max-width: 75%;
+}
 
-  .project-image-overlay {
-    color: black;
-    text-align: center;
-    background-color: white;
-    background-size: 16px 16px;
-    max-width: 78%;
-    margin-top: -30px;
-    position: relative;
-    margin-bottom: 10px;
-    padding: 1px;
-  }
+/*Projects*/
+.projects {
+  height: 83vh;
+  background-image: url(http://i.space.com/images/i/000/015/590/wW4/atlas-launch-muos-1920.jpg?1330542179);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 
-  .project-image-overlay-header {
-     margin-top: 10px;
-  }
+.projects h2 {
+  color: white;
+}
 
-  .project-image-overlay-description {
-     margin-top: -4px;
-     font-style: italic;
-  }
+.projects img {
+  max-width: 85%;
+  height: auto;
+  min-height: 250px;
+  margin-top: 20px;
+}
 
-  .blog {
-    height: 100vh;
-    background-color: white;
-    color: black;
-  }
+.projects img:hover {
 
-  /*Connect*/
-  .connect {
-    height: 100vh;
-    background-image: url('./images/post-box.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-x: 50%;
-    background-position-y: 50%;
-    background-attachment: fixed;
-    color: white;
-  }
+}
 
-  #connect-msg {
-    margin-top: 18%;
-    text-align: center;
-    font-size: 6em;
-  }
+.project-image-overlay {
+  color: white;
+  text-align: center;
+  background-color: rgba(0,0,0,0.8);
+  background-size: 16px 16px;
+  max-width: 85%;
+  position: relative;
+  margin-bottom: 10px;
+  padding: 1px;
+}
 
-  .connect .row {
-    text-align: right;
-  }
+.project-image-overlay-header {
+   margin-top: 10px;
+}
 
-  .btn-connect {
-    margin: 5px;
-  }
+.project-image-overlay-description {
+   margin-top: -4px;
+   font-style: italic;
+}
 
-  /*Footer*/
-  footer {
-    height: 150px;
-  }
+/*Blog*/
 
-  #footerList {
-    margin-top: 20px;
-  }
+.blog {
+  height: 100%;
+  min-height: 500px;
+  background-color: white;
+  color: black;
+}
 
-  footer li a {
-    color: white;
-  }
+/*Connect*/
+.connect {
+  height: 100%;
+  min-height: 600px;
+  background-image: url('./images/post-box.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: 35%;
+  background-attachment: fixed;
+  color: white;
+}
+
+#connect-msg {
+  text-align: center;
+  font-size: 6em;
+}
+
+.connect .row {
+  text-align: center;
+}
+
+.btn-connect {
+  margin: 5px;
+}
+
+/*Footer*/
+footer {
+  height: 130px;
+}
+
+#footerList {
+  margin-top: 20px;
+}
+
+footer li a {
+  color: white;
+}

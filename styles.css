@@ -51,7 +51,9 @@
   }
 
   .nav.navbar-nav.navbar-right li a {
-    color: white;
+    color: black;
+    background-color: white;
+    border: 1px solid black;
     font-weight: bold;
   }
 

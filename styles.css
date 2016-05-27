@@ -64,7 +64,7 @@
 
   .aboveFold {
     background-image: url(http://img.thesun.co.uk/aidemitlum/archive/01085/Labrador_in-car_68_1085457a.jpg);
-    background-size: 100% auto;
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 100vh;
@@ -106,7 +106,7 @@
   .projects {
     height: 100vh;
     background-image: url(http://i.space.com/images/i/000/015/590/wW4/atlas-launch-muos-1920.jpg?1330542179);
-    background-size: 100% auto;
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
   }
@@ -148,7 +148,7 @@
   .connect {
     height: 100vh;
     background-image: url('./images/post-box.jpg');
-    background-size: 100% auto;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position-x: 50%;
     background-position-y: 50%;

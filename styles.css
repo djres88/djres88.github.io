@@ -67,9 +67,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 100vh;
-    background-position-x: 50%;
-    background-position-y: 50%;
+    background-position: center center;
+    height: 680px;
   }
 
   .aboveFold .container {

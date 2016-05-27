@@ -64,7 +64,7 @@
 
   .aboveFold {
     background-image: url('./images/car-dog.jpg');
-    background-size: 100% auto;
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position-x: center;

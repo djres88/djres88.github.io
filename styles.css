@@ -63,14 +63,13 @@
   }
 
   .aboveFold {
-    background-image: url(http://img.thesun.co.uk/aidemitlum/archive/01085/Labrador_in-car_68_1085457a.jpg);
+    background-image: url('./images/car-dog.jpg');
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position-x: center;
     background-position-y: 40%;
     height: 100vh;
-    zoom: 100%;
   }
 
   .aboveFold .container {

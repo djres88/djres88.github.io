@@ -136,12 +136,22 @@ li {
 
 .projects h2 {
   color: white;
+  position: absolute;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+
+.project-image {
+  margin-top: 100px;
 }
 
 .projects img {
-  max-width: 85%;
+  max-height: 300px;
   height: auto;
-  min-height: 250px;
   margin-top: 20px;
 }
 
@@ -154,7 +164,8 @@ li {
   text-align: center;
   background-color: rgba(0,0,0,0.8);
   background-size: 16px 16px;
-  max-width: 85%;
+  width: 100%;
+  max-width: 400px;
   position: relative;
   margin-bottom: 10px;
   padding: 1px;

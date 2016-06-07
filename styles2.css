@@ -35,6 +35,10 @@ img {
   width: 100%;
 }
 
+a {
+  text-decoration: none !important;
+}
+
 /*a.button {
   -webkit-appearance: button;
   -moz-appearance: button;

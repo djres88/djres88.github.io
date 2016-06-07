@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+
+    <title>David's Portfolio</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css">
+
+    <!--Main document style sheets-->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Asap:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body>
+    <!--navbar-->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" style="color:lightgray" data-toggle="collapse" data-target="#myNavbar" href="#myNavbar"><i class="fa fa-bars"></i>
+          </button>
+          <a class="navbar-brand pull-left" href="#">David Resnick</a>
+        </div>
+        <div id="myNavbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#connect-msg">Connect</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--end navbar-->
+    <!--above-fold-->
+    <div class="aboveFold">
+      <div class="container above-fold-header">
+        <h1>LET'S GET TO WORK</h1>
+          <div class="row">
+            <div class="col-md-6"><a target="_blank" href="https://github.com/djres88" class="btn btn-main"><i class="fa fa-github"></i> Github</a></div>
+            <div class="col-md-6"><a href="#projects"  class="btn btn-main"><i class=""></i>Projects</a></div>
+            <!-- <div class="col-md-4"><a target="_blank" href="https://www.linkedin.com/in/david-resnick-088b2822"  class="btn btn-main"><i class="fa fa-linkedin"></i> LinkedIn</a></div> -->
+          </div>
+      </div>
+    </div>
+    <!--end above-fold-->
+    <div class="hyperlinks" id="about">
+    </div>
+    <!--bio-->
+    <div class="bio">
+      <div class="container">
+        <h2 class="section-header">Hi! I'm David,</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <p>a starry-eyed web developer with a passion (and a knack!) for building neat stuff. Do you have neat stuff for me to build? <a  href="#connect" style="font-weight:bold">Let me know!</a></p>
+
+            <p>My current tools include Ruby, Rails, JavaScript, HTML/CSS, jQuery, React, and a number of others. The list grows by the month, if not faster, so check back often. In the meantime, I have a few <a href="#projects"  style="font-weight:bold">projects</a> that you can check out.
+            </p>
+
+            <p>In my time away from the computer I enjoy being outside, eating tacos (sometimes while at my computer!), playing basketball, traveling, listening to podcasts, and working on my impersonations of Simpsons characters.</p>
+
+          </div>
+          <div class="col-md-6">
+           <img id="profilePic" class="center-block img-responsive"  src="https://avatars1.githubusercontent.com/u/14188320?v=3&s=460" alt="Profile Pic Missing" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--end bio-->
+    <div class="hyperlinks" id="projects">
+    </div>
+    <!--projects-->
+    <div class="projects">
+      <div class="container">
+        <h2 class="section-header">PROJECTS</h2>
+        <div class="row projects">
+          <div class="project-image">
+            <a href="http://www.9-to.com"><img class="img-responsive" src="./images/9-to_home.jpg" alt="9-to.com" />
+              <div class="project-image-overlay">
+                <h4 class="project-image-overlay-header">9-to</h4>
+                <p class="project-image-overlay-description">Ruby, Rails, JavaScript, React</p>
+              </div>
+            </a>
+          </div>
+          <div class="project-image">
+            <a href="http://djres88.github.io/colonies/"><img class="img-responsive" src="./images/cat-colonies.jpg" alt="cat-colonies-game"/>
+              <div class="project-image-overlay">
+                <h4 class="project-image-overlay-header">Cat Colonies!</h4>
+                <p class="project-image-overlay-description">JavaScript, Canvas</p>
+              </div>
+            </a>
+          </div>
+          <!-- <div class="project-image col-md-3 col-xs-6">
+            <a href="http://djres88.github.io/fizz-buzz/fizzbuzz"><img class="img-responsive" src="http://djres88.github.io/images/fizzbuzz.jpg" alt="FizzBuzz" />
+              <div class="project-image-overlay">
+                <h4 class="project-image-overlay-header">FizzBuzzable</h4>
+                <p class="project-image-overlay-description">Interactive/custom FizzBuzz games</p>
+              </div>
+            </a>
+          </div> -->
+          <!-- <div class="project-image col-md-3 col-xs-6">
+            <a href="#"><img class="img-responsive" src="https://s-media-cache-ak0.pinimg.com/736x/39/33/62/3933621dffc584e5783816f09df72103.jpg" alt="Fantasy Football Lineup Optimizer" />
+              <div class="project-image-overlay">
+                <h4 class="project-image-overlay-header">Fantasy Lineup Optimizers</h4>
+                <p class="project-image-overlay-description">Calculate the ideal lineup</p>
+              </div>
+            </a>
+          </div>
+          <div class="project-image col-md-3 col-xs-6">
+            <a href="http://djres88.github.io/fcc/project02/index"><img class="img-responsive" src="http://www.ctnewsjunkie.com/images/made/upload/2015/10/qpoll-presidential-candidates-2016_488_488_99.jpg" alt="Presidential Candidate Quote Generator" />
+              <div class="project-image-overlay">
+                <h4 class="project-image-overlay-header">Candidate Quote Generator</h4>
+                <p class="project-image-overlay-description">Real or Made Up?</p>
+              </div>
+            </a>
+          </div> -->
+        </div>
+      </div>
+    </div>
+    <!--end projects-->
+    <div class="hyperlinks" id="blog">
+    </div>
+    <!--blog-->
+    <div class="blog">
+      <div class="container">
+        <h2 class="section-header">BLOG</h2>
+        <h3>Under Contstruction!</h3>
+        </div>
+      </div>
+    </div>
+    <!--end blog-->
+    <div class="hyperlinks" id="connect">
+    </div>
+    <!--connect-->
+    <div class="connect">
+      <div class="container">
+        <h2 class="section-header" id="connect-msg">DROP A LINE</h2>
+        <div class="row">
+          <div class="col-md-12">
+            <a href="mailto:davidj.resnick@gmail.com"><h3 style="font-weight:bold">davidj.resnick@gmail.com</h3></a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="col-md-12">
+              <a target="_blank" href="https://github.com/djres88" class="btn btn-connect"><i class="fa fa-github"></i> Github</a>
+            </div>
+            <div class="col-md-12">
+              <a target="_blank" href="https://www.linkedin.com/in/david-resnick-088b2822" class="btn btn-connect"><i class="fa fa-linkedin"></i> LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--end connect-->
+    <!--footer-->
+    <footer class="navbar-inverse">
+      <div class=container>
+        <div class=row>
+          <div class=col-md-4>
+            <ul class="list" id="footerList">
+              <li><a href="#home" style="color:white">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#blog">Blog</a></li>
+              <li><a href="#connect">Connect</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--end footer-->
+  </body>
+</html>

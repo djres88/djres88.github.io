@@ -1,228 +1,158 @@
-
-/*Defaults*/
-body {
-  font-family: 'Asap', sans-serif;
+/*Reset your CSS before you wreck your CSS.*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  font-family: monospace;
+  color: inherit;
+  vertical-align: baseline;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  box-sizing: inherit;
 }
 
-li {
-  list-style-type: none;
-  color: white;
-}
-
-.btn {
-  font-size: 18px;
-  letter-spacing: 1px;
-  margin-top: 4px;
-  color: white;
-  border: white;
-  border-style: solid;
-  border-width: 2px;
-  background: rgba(10,10,10,0.6);
-  width: 180px;
-  transition: all 0.5s ease 0s;
-}
-
-.btn:hover {
-  background-color: white;
-  border-color: black;
-}
-
-.section-header {
-  font-size: 3em;
-  margin: 4% 0 2% 0;
-  font-weight: 700;
-}
-
-.connect h3 {
-  color: white;
-  text-decoration: underline;
-}
-
-.connect h3:hover {
-  color: #337ab7;
-  transition: all 0.3s ease 0s;
-}
-/*Hyperlinks*/
-.hyperlinks {
-  position: absolute;
-  margin-top: -5%;
-}
-
-/*Navbar*/
-.navbar-custom {
-  background: black;
-  border: none;
-  color: black;
-  height: 10%;
-  font-size: 1.5em;
-}
-
-.navbar-default .navbar-brand {
-  color: white;
+strong {
   font-weight: bold;
-  font-size: 1em;
-  line-height: 2;
 }
 
-.nav.navbar-nav.navbar-right li a {
-  color: white;
-  background-color: black;
-  font-weight: bold;
-  line-height: 2;
+img {
+  width: 100%;
 }
 
-/*above fold*/
-.above-fold-header {
-  background: rgba(184,184,184,0.75);
-  width: 50%;
-  min-height: 20%;
+a {
+  text-decoration: none !important;
 }
 
-.aboveFold {
-  background-image: url('./images/car-dog.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position-x: center;
-  background-position-y: 50%;
-  height: 100vh;
-}
-
-.aboveFold .container {
-  color: black;
-  top: 36%;
-  position: relative;
+/*a.button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
   text-align: center;
-  width: 65%;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px 20px 50px 20px;
-}
+  color: initial;
+  border-radius: none;
+  padding: 0.5em 1em;
+  cursor: pointer;
+}*/
 
-.aboveFold .container h1 {
-  font-size: 4em;
-  font-weight: 700;
-  color: black;
-}
-
-/*Bio*/
-.bio {
-  height: 100%;
-  min-height: 83vh;
-  text-align: left;
-  background-color: white;
-  color: black;
-  background-size: 16px 16px;
-  font-size: 1.5em;
-  padding-bottom: 10%;
-}
-
-.bio h2 {
-  font-size: 2.5em;
-}
-
-#profilePic {
-  max-width: 75%;
-}
-
-/*Projects*/
-.projects {
-  height: 83vh;
-  background-image: url(http://i.space.com/images/i/000/015/590/wW4/atlas-launch-muos-1920.jpg?1330542179);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-.projects h2 {
-  color: white;
-  position: absolute;
-}
-
-.projects {
+.me-and-links {
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-around;
+  flex-direction: column;
+  padding: 5% 0;
 }
+
+.me-and-links h2 {
+  font-size: 2em;
+  font-weight: bold;
+  padding-bottom: 2%;
+}
+
+.sidebar {
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 12px;
+}
+
+/*.selected-things {
+  margin-left: 3%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}*/
 
 .project-image {
-  margin-top: 100px;
-}
-
-.projects img {
-  max-height: 300px;
+  margin-left: 5%;
+  padding-top: 7%;
+  width: 90%;
   height: auto;
-  margin-top: 20px;
+  min-height: 300px;
+  margin-bottom: 40%;
 }
 
-.projects img:hover {
-
-}
-
-.project-image-overlay {
-  color: white;
-  text-align: center;
-  background-color: rgba(0,0,0,0.8);
-  background-size: 16px 16px;
-  width: 100%;
-  max-width: 400px;
-  position: relative;
-  margin-bottom: 10px;
-  padding: 1px;
-}
-
-.project-image-overlay-header {
-   margin-top: 10px;
-}
-
-.project-image-overlay-description {
-   margin-top: -4px;
-   font-style: italic;
-}
-
-/*Blog*/
-
-.blog {
-  height: 100%;
-  min-height: 500px;
-  background-color: white;
-  color: black;
-}
-
-/*Connect*/
-.connect {
-  height: 100%;
-  min-height: 600px;
-  background-image: url('./images/post-box.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position-y: 35%;
-  background-attachment: fixed;
-  color: white;
-}
-
-#connect-msg {
-  text-align: center;
-  font-size: 6em;
-}
-
-.connect .row {
+.project-image h4 {
+  margin-top: 2%;
+  font-size: 2em;
   text-align: center;
 }
 
-.btn-connect {
-  margin: 5px;
+.back {
+  max-height: 800px;
+  cursor: pointer;
 }
 
-/*Footer*/
-footer {
-  height: 130px;
+.front {
+  border-bottom: 1px solid #eee;
 }
 
-#footerList {
-  margin-top: 20px;
+#nine-to {
+  background: #ff5a5f;
 }
 
-footer li a {
+#cat-colonies {
+  background: #003366;
+}
+
+#off-the-tracks {
+  background: red;
+}
+
+.back-text {
   color: white;
+  margin: 10px;
 }
+
+.back-text p {
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+
+@media (min-width: 920px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .me-and-links {
+    width: 18%;
+  }
+
+  .selected-things {
+    margin-left: 3%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .project-image {
+    width: 28%;
+    margin: 0 2%;
+    margin-bottom: 0;
+    min-height: 100px;
+  }
+
+  .project-image p {
+    font-size: 0.8em;
+    margin-top: 0.4em;
+  }
+
+  .back {
+    max-height: 270px;
+    cursor: pointer;
+  }

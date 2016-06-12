@@ -75,13 +75,6 @@ a {
   height: 22.5em;
 }
 
-.selected-things div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 2% 2% 2%;
-}
-
 .back {
   text-align: center;
 }
@@ -98,6 +91,7 @@ a {
 }
 
 .tools-list {
+  margin: 0.5em 1em 4em 1em;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -108,24 +102,24 @@ a {
   font-size: 0.6em;
   font-family: sans-serif;
   padding: 0.5em;
-  margin: 0.3em;
+  margin: 0.2em;
   border: 1px solid white;
 }
 
-
 .have-a-look {
   border: 3px solid white;
+  margin-top: 20px;
   padding: 1em 2em;
   text-align: center;
+  display: inline;
   background: transparent;
   color: white;
-  margin: auto;
 }
 
 h4 {
   margin-top: 5px;
-  margin-left: 3%;
   font-size: 2em;
+  text-align: center;
 }
 
 /*Projects - Specific*/
@@ -148,7 +142,7 @@ h4 {
   margin: 5em;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 920px) {
   .main {
     display: flex;
     flex-direction: row;
@@ -163,4 +157,8 @@ h4 {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+  }
+
+  .selected-things div {
+    margin: 0 2% 5% 2%;
   }

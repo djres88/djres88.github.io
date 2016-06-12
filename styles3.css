@@ -1,0 +1,83 @@
+/*Reset your CSS before you wreck your CSS.*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  font-family: monospace;
+  color: inherit;
+  vertical-align: baseline;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  box-sizing: inherit;
+}
+
+strong {
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.main {
+  padding: 5%;
+  display: flex;
+  flex-direction: row;
+}
+
+.me-and-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.me-and-links h2 {
+  font-size: 2em;
+  font-weight: bold;
+  padding-bottom: 2%;
+}
+
+.sidebar {
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 12px;
+}
+
+.selected-things {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.project {
+  padding: 1em;;
+}
+
+.front img {
+  width: 400px;
+}
+
+#front-1 {
+  background-color: black;
+}
+
+@media (min-width: 920px) {
+
+  .me-and-links {
+    width: 18%;
+  }

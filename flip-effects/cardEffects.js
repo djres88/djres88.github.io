@@ -19,6 +19,7 @@ $(document).ready(function() {
 
   // Have the button border width grow/reset. Hints that the user should click it. Super cheesy? Maybe. Did it WORK, though?
   var borderThickness = 0.2;
+  
   var buttonToggler = setInterval(function() {
     borderThickness = (borderThickness %= 0.8) + 0.2;
     $('.have-a-look').css({
@@ -26,13 +27,13 @@ $(document).ready(function() {
     });
   }, 200);
 
-  //Random neon colors on hover-over for the main button. This is just custom enough for each type of button to make refactoring kind of impractical, I think. It's really the buttonToggler, pluss the fontWeight and color stuff,
+  //Random neon colors on hover-over for the main button.
   var colorSwitcher;
   $('.have-a-look').hover(
-    function() {
+    function(el) {
       clearInterval(buttonToggler);
       colorSwitcher = setInterval(function() {
-        $('.have-a-look').css({
+        $(el.target).css({
           color: "white",
           fontWeight: "bold",
           backgroundColor: randomColor()
@@ -53,4 +54,22 @@ $(document).ready(function() {
     }
   );
 
+  // Random neon colors on hover-over for the me-and-links a tags.
+  $(".me-and-links").children("a").hover(
+    function(el) {
+      colorSwitcher = setInterval(function() {
+        $(el.target).css({
+          color: randomColor(),
+          fontWeight: "bold"
+        });
+      }, 70);
+    },
+
+    function(el) {
+      clearInterval(colorSwitcher);
+      $(el.target).css({
+        color: "black",
+        fontWeight: "normal"
+      });
+    }, 70);
 });

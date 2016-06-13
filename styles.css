@@ -39,6 +39,10 @@ a {
 .me-and-links {
   display: flex;
   flex-direction: column;
+  margin-bottom: 1em;
+  /* Safari */
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
 }
 
 .me-and-links h2 {
@@ -78,8 +82,12 @@ a {
 .selected-things div {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin: 3% 2% 2% 2%;
+  align-self: center;
+  margin: 0 2%;
+  /* Safari */
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  -webkit-align-self: center;
 }
 
 .back {
@@ -102,6 +110,11 @@ a {
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
+  /* Safari flexbox fix */
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+  -webkit-justify-content: center;
+  -webkit-flex-wrap: wrap;
 }
 
 .tools-list p {
@@ -114,8 +127,9 @@ a {
 
 
 .have-a-look {
-  border: 3px solid white;
+  border: 1px solid white;
   padding: 1em 2em;
+  width: 100px;
   text-align: center;
   background: transparent;
   color: white;
@@ -123,9 +137,10 @@ a {
 }
 
 h4 {
-  margin-top: 5px;
-  margin-left: 3%;
+  margin: 0.2em 0 1em 3%;
   font-size: 2em;
+  width: 100%;
+  text-align: center;
 }
 
 /*Projects - Specific*/
@@ -148,14 +163,18 @@ h4 {
   margin: 5em;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 920px) {
   .main {
     display: flex;
     flex-direction: row;
+    /* Safari flexbox fix */
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
   }
 
   .me-and-links {
     width: 18%;
+    margin-bottom: 0;
   }
 
   .selected-things {
@@ -163,8 +182,8 @@ h4 {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-  }
-
-  .selected-things div {
-    margin: 0 2% 2% 2%;
+    /* Safari flexbox fix */
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    -webkit-flex-wrap: wrap;
   }

@@ -1,0 +1,88 @@
+.top {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/*Main well*/
+.main-table {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/*Predictions/Handicapping (left section)*/
+.predictions {
+  border: 1px solid black;
+  padding: 25px;
+}
+
+.horse-table .headers {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+}
+
+.headers .table-header {
+  margin-left: 40px;
+  margin-bottom: -10px;
+  font-size: 1em;
+}
+
+.horse {
+  display: flex;
+  flex-direction: row;
+  margin: 0 10px;
+}
+
+.horse input {
+  padding: 5px;
+  margin: 5px;
+}
+
+.horse .horse-number {
+  padding: 5px;
+  margin: 5px;
+}
+
+.horse .reset-horse {
+  padding: 5px;
+  margin: 5px;
+}
+
+/*Odds*/
+.odds {
+  margin-left: 30px;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 5px;
+  text-align: center;
+  font-size: 16px;
+
+}
+
+td {
+  font-size: 12px;
+}
+
+tr td:first-child  {
+  font-size: 16px;
+}
+
+ul {
+  list-style: none;
+}
+
+.actual-odds input {
+  width: 30px;
+  border: none !important;
+  text-align: center;
+  height: 20px;
+  font-size: 12px;
+}

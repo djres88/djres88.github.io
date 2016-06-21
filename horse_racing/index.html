@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Race Calculator</title>
+    <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="top">
+      <h1>The Horse Race Simulator</h1>
+      <p>Enter your bankroll:
+      <input id="bankroll" type="number" name="name" value="1000"></p>
+      <button id="run-simulation">Run Simulation</button>
+    </div>
+    <div class="main-table">
+      <div class="predictions">
+        <ul>
+          <li>1. Select a predicted <span>average</span> for each horse's running speed.</li>
+          <li>2. Select a predicted <span>variance</span> for that horse's running speed.</li>
+          <li>3. Run the simulation!</li>
+        </ul>
+        <!-- This will be easier with backend views. -->
+        <form class="horse-table" action="index.html" method="post">
+          <div class="headers">
+            <h3 class="table-header">
+              Predicted Speed
+            </h3>
+            <h3 class="table-header">
+              Predicted Var
+            </h3>
+          </div>
+          <div class="values">
+
+          </div>
+        </form>
+      </div>
+      <div class="odds">
+        <table>
+          <tr>
+            <th>#</th>
+            <th>Predicted Odds</th>
+            <th>Actual Odds</th>
+            <th>%Diff</th>
+            <th>$Bet</th>
+          </tr>
+          <tr class="horse-odds" id="ho-1">
+            <td>1</td>
+            <td class="predicted-odds"></td>
+            <td class="actual-odds">
+              <input type="number" name="realodds" value="">
+            </td>
+            <td class="perecent-diff"></td>
+            <td class="should-bet"></td>
+          </tr>
+          <tr class="horse-odds" id="ho-2">
+            <td>2</td>
+            <td class="predicted-odds"></td>
+            <td class="actual-odds">
+              <input type="number" name="realodds" value="">
+            </td>
+            <td class="perecent-diff"></td>
+            <td class="should-bet"></td>
+          </tr>
+          <tr class="horse-odds" id="ho-3">
+            <td>3</td>
+            <td class="predicted-odds"></td>
+            <td class="actual-odds">
+              <input type="number" name="realodds" value="">
+            </td>
+            <td class="perecent-diff"></td>
+            <td class="should-bet"></td>
+          </tr>
+          <tr class="horse-odds" id="ho-4">
+            <td>4</td>
+            <td class="predicted-odds"></td>
+            <td class="actual-odds">
+              <input type="number" name="realodds" value="">
+            </td>
+            <td class="perecent-diff"></td>
+            <td class="should-bet"></td>
+          </tr>
+          <tr class="horse-odds" id="ho-5">
+            <td>5</td>
+            <td class="predicted-odds"></td>
+            <td class="actual-odds">
+              <input type="number" name="realodds" value="">
+            </td>
+            <td class="perecent-diff"></td>
+            <td class="should-bet"></td>
+          </tr>
+          <tr class="horse-odds" id="ho-6">
+            <td>6</td>
+            <td class="predicted-odds"></td>
+            <td class="actual-odds">
+              <input type="number" name="realodds" value="">
+            </td>
+            <td class="perecent-diff"></td>
+            <td class="should-bet"></td>
+          </tr>
+          <tr class="horse-odds" id="ho-7">
+            <td>7</td>
+            <td class="predicted-odds"></td>
+            <td class="actual-odds">
+              <input type="number" name="realodds" value="">
+            </td>
+            <td class="perecent-diff"></td>
+            <td class="should-bet"></td>
+          </tr>
+          <tr class="horse-odds" id="ho-8">
+            <td>8</td>
+            <td class="predicted-odds"></td>
+            <td class="actual-odds">
+              <input type="number" name="realodds" value="">
+            </td>
+            <td class="perecent-diff"></td>
+            <td class="should-bet"></td>
+          </tr>
+          <tr class="horse-odds" id="ho-9">
+            <td>9</td>
+            <td class="predicted-odds"></td>
+            <td class="actual-odds">
+              <input type="number" name="realodds" value="">
+            </td>
+            <td class="perecent-diff"></td>
+            <td class="should-bet"></td>
+          </tr>
+          <tr class="horse-odds" id="ho-10">
+            <td>10</td>
+            <td class="predicted-odds"></td>
+            <td class="actual-odds">
+              <input type="number" name="realodds" value="">
+            </td>
+            <td class="perecent-diff"></td>
+            <td class="should-bet"></td>
+          </tr>
+          <tr class="horse-odds" id="ho-11">
+            <td>11</td>
+            <td class="predicted-odds"></td>
+            <td class="actual-odds">
+              <input type="number" name="realodds" value="">
+            </td>
+            <td class="perecent-diff"></td>
+            <td class="should-bet"></td>
+          </tr>
+          <tr class="horse-odds" id="ho-12">
+            <td>12</td>
+            <td class="predicted-odds"></td>
+            <td class="actual-odds">
+              <input type="number" name="realodds" value="">
+            </td>
+            <td class="perecent-diff"></td>
+            <td class="should-bet"></td>
+          </tr>
+          <tr class="horse-odds" id="ho-13">
+            <td>13</td>
+            <td class="predicted-odds"></td>
+            <td class="actual-odds">
+              <input type="number" name="realodds" value="">
+            </td>
+            <td class="perecent-diff"></td>
+            <td class="should-bet"></td>
+          </tr>
+          <tr class="horse-odds" id="ho-14">
+            <td>14</td>
+            <td class="predicted-odds"></td>
+            <td class="actual-odds">
+              <input type="number" name="realodds" value="">
+            </td>
+            <td class="perecent-diff"></td>
+            <td class="should-bet"></td>
+          </tr>
+          <tr class="horse-odds" id="ho-15">
+            <td>15</td>
+            <td class="predicted-odds"></td>
+            <td class="actual-odds">
+              <input type="number" name="realodds" value="">
+            </td>
+            <td class="perecent-diff"></td>
+            <td class="should-bet"></td>
+          </tr>
+          <tr class="horse-odds" id="ho-16">
+            <td>16</td>
+            <td class="predicted-odds"></td>
+            <td class="actual-odds">
+              <input type="number" name="realodds" value="">
+            </td>
+            <td class="perecent-diff"></td>
+            <td class="should-bet"></td>
+          </tr>
+          <tr class="horse-odds" id="ho-17">
+            <td>17</td>
+            <td class="predicted-odds"></td>
+            <td class="actual-odds">
+              <input type="number" name="realodds" value="">
+            </td>
+            <td class="perecent-diff"></td>
+            <td class="should-bet"></td>
+          </tr>
+          <tr class="horse-odds" id="ho-18">
+            <td>18</td>
+            <td class="predicted-odds"></td>
+            <td class="actual-odds">
+              <input type="number" name="realodds" value="">
+            </td>
+            <td class="perecent-diff"></td>
+            <td class="should-bet"></td>
+          </tr>
+          <tr class="horse-odds" id="ho-19">
+            <td>19</td>
+            <td class="predicted-odds"></td>
+            <td class="actual-odds">
+              <input type="number" name="realodds" value="">
+            </td>
+            <td class="perecent-diff"></td>
+            <td class="should-bet"></td>
+          </tr>
+          <tr class="horse-odds" id="ho-20">
+            <td>20</td>
+            <td class="predicted-odds"></td>
+            <td class="actual-odds">
+              <input type="number" name="realodds" value="">
+            </td>
+            <td class="perecent-diff"></td>
+            <td class="should-bet"></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

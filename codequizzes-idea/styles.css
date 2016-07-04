@@ -1,0 +1,29 @@
+.languages {
+  padding: 0 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.language-box {
+  height: 350px;
+  min-width: 200px;
+  background-color: #eee;
+  margin: 25px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.language-box img {
+  margin-top: 20px;
+  border-radius: 50%;
+  width: 100px;
+  background-color: white;
+  padding: 20px;
+}
+
+.language-box:hover {
+  background-color: #365358;
+  transition: 0.5s ease;
+  color: white;
+}
